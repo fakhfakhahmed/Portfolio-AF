@@ -1,0 +1,120 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "about": "\u00c0 propos",
+    "experience": "Exp\u00e9rience",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis Ahmed Fakhfakh",
+    "subtitle": "D\u00e9veloppeur Web Full-Stack"
+  },
+  "home": {
+    "personal": "25 ans / Tunisie / Freelance",
+    "aboutText": "Je suis Ahmed, un d\u00e9veloppeur full-stack de 25 ans originaire de Tunisie. Je transforme le caf\u00e9 en code et les bugs en nuits blanches. J'aime tellement cr\u00e9er des applications que j'ai d\u00e9j\u00e0 d\u00e9bogu\u00e9 dans mes r\u00eaves. Je suis sp\u00e9cialis\u00e9 dans la transformation de la caf\u00e9ine et des posts Stack Overflow en applications fonctionnelles - et parfois, en stress.",
+    "services": "Mes Services",
+    "webDev": "D\u00e9veloppement Web",
+    "webDevDesc": "Cr\u00e9ation de solutions sur mesure bas\u00e9es sur vos sp\u00e9cifications techniques.",
+    "seo": "Optimisation SEO & Performance",
+    "seoDesc": "Je m'assure que votre application se charge plus vite que vous ne pouvez dire \"Time to First Byte\".",
+    "microservices": "Microservices & APIs",
+    "microservicesDesc": "Conception de syst\u00e8mes backend \u00e9volutifs avec Spring Boot et Node.js qui ne planteront pas... trop souvent.",
+    "security": "S\u00e9curit\u00e9 des Donn\u00e9es & Applications",
+    "securityDesc": "Protection de votre application comme s'il s'agissait de mon mot de passe Netflix (autrement dit : tr\u00e8s s\u00e9rieusement).",
+    "profileAlt": "Ahmed Fakhfakh - D\u00e9veloppeur"
+  },
+  "about": {
+    "title": "\u00c0 propos de moi",
+    "description": "Jeune ing\u00e9nieur passionn\u00e9 par le d\u00e9veloppement web et mobile, je suis \u00e0 la recherche d\u2019un poste stimulant en tant que d\u00e9veloppeur junior (React.js / Node.js). Motiv\u00e9, curieux et rigoureux, je souhaite int\u00e9grer une \u00e9quipe dynamique o\u00f9 je pourrai contribuer activement aux projets et d\u00e9velopper mes comp\u00e9tences.",
+    "professionalTitle": "Profil Professionnel",
+    "experience": "Mon exp\u00e9rience couvre la construction d'applications web r\u00e9actives avec React.js, la conception d'architectures backend \u00e9volutives avec Spring Boot et la mise en \u0153uvre de pipelines DevOps avec Jenkins et Docker. J'ai \u00e9galement travaill\u00e9 avec Flutter dans des contextes multiplateformes. Je suis particuli\u00e8rement passionn\u00e9 par l'optimisation des API REST, l'am\u00e9lioration des performances syst\u00e8me et la fourniture d'un code propre et efficace sur l'ensemble de la pile.",
+    "educationTitle": "Formation & \u00c9ducation",
+    "degree1": "Dipl\u00f4me National d'Ing\u00e9nieur en G\u00e9nie Logiciel",
+    "school1": "ESPRIT - \u00c9cole Sup\u00e9rieure Priv\u00e9e d'Ing\u00e9nierie et de Technologies, Tunis, 2018-2023",
+    "degree2": "Baccalaur\u00e9at en Sciences Informatiques",
+    "school2": "Lyc\u00e9e Rue ELAtriche, Ariana, 2018",
+    "languagesTitle": "Langues",
+    "arabic": "Arabe",
+    "native": "Langue maternelle",
+    "english": "Anglais",
+    "french": "Fran\u00e7ais",
+    "problemSolving": "R\u00e9solution de Probl\u00e8mes",
+    "problemSolvingDesc": "Pens\u00e9e analytique pour relever des d\u00e9fis techniques complexes",
+    "teamwork": "Collaboration en \u00c9quipe",
+    "teamworkDesc": "Coop\u00e9ration efficace dans des \u00e9quipes de d\u00e9veloppement diverses",
+    "communication": "Communication",
+    "communicationDesc": "Expression claire des concepts techniques \u00e0 divers publics",
+    "adaptability": "Adaptabilit\u00e9",
+    "adaptabilityDesc": "Ajustement rapide aux nouvelles technologies et exigences",
+    "techStackTitle": "Ma Pile Technologique",
+    "langSectionTitle": "Langages",
+    "frontendTitle": "Frontend",
+    "devopsTitle": "DevOps & Outils",
+    "backendTitle": "Backend",
+    "databasesTitle": "Bases de Donn\u00e9es",
+    "architecturesTitle": "Architectures",
+    "certificationsTitle": "Certifications",
+    "viewCertificate": "Voir le Certificat",
+    "certificateAlt": "Certificat",
+    "philosophyTitle": "Ma Philosophie",
+    "philosophyText": "Je crois en la cr\u00e9ation d'applications web qui sont non seulement visuellement stup\u00e9fiantes mais aussi hautement fonctionnelles et conviviales. Chaque ligne de code doit servir un objectif, et chaque d\u00e9cision de conception doit am\u00e9liorer l'exp\u00e9rience utilisateur.",
+    "interestsTitle": "Au-del\u00e0 du Codage",
+    "gaming": "Jeux Vid\u00e9o",
+    "gamingDesc": "Passionn\u00e9 par les jeux vid\u00e9o, j'aime jouer et cr\u00e9er.",
+    "camping": "Camping",
+    "campingDesc": "J'aime faire du camping et explorer la nature.",
+    "sport": "Sport",
+    "sportDesc": "J'aime aller \u00e0 la salle de sport et rester en forme."
+  },
+  "skills": {
+    "title": "Comp\u00e9tences Techniques",
+    "languages": "Langages : JavaScript, Java, PHP, Dart",
+    "frontend": "Frontend : React.js, Angular, Flutter",
+    "backend": "Backend : Node.js, Spring Boot",
+    "databases": "Bases de donn\u00e9es : MySQL, MongoDB",
+    "devops": "DevOps & Outils : Docker, Jenkins, SonarQube, Prometheus, Grafana",
+    "methodologies": "M\u00e9thodologies : Microservices, API REST, CI/CD"
+  },
+  "experience": {
+    "title": "Exp\u00e9riences Professionnelles",
+    "tactic": {
+      "role": "D\u00e9veloppeur Full-Stack \u2013 Stage de fin d\u2019\u00e9tudes",
+      "company": "TAC-TIC (02/2023 \u2013 08/2023)",
+      "details": [
+        "D\u00e9veloppement d\u2019une application mobile (Flutter) et web (React.js).",
+        "Mise en place d\u2019une architecture microservices avec Spring Boot.",
+        "Int\u00e9gration CI/CD via Jenkins et Docker.",
+        "Optimisation des API REST (r\u00e9duction de 30 % du temps de r\u00e9ponse)."
+      ]
+    },
+    "beecoders": {
+      "role": "D\u00e9veloppeur Full-Stack \u2013 Stage Ing\u00e9nieur",
+      "company": "Beecoders (06/2022 \u2013 08/2022)",
+      "details": [
+        "Conception d\u2019un site e-commerce gaming (React.js, Node.js, MongoDB)."
+      ]
+    },
+    "sisagri": {
+      "role": "D\u00e9veloppeur Web \u2013 Stage Technicien",
+      "company": "Sisagri (06/2021 \u2013 08/2021)",
+      "details": [
+        "R\u00e9alisation d\u2019un site e-commerce pour la vente/location de mat\u00e9riel agricole."
+      ]
+    }
+  },
+  "projects": {
+    "title": "Projets Personnels",
+    "list": [
+      "Projet DevOps CI/CD \u2013 Jenkins, Docker, SonarQube, Prometheus, Grafana (2022)",
+      "Application Web RH \u2013 Angular, Spring Boot, MySQL (2021)",
+      "Application Multiplateforme Artistes \u2013 Symfony, JavaFX, CodeNameOne (2020)"
+    ]
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "email": "fakhfakh.ahmeed@gmail.com",
+    "phone": "+216 28 820 474",
+    "linkedin": "linkedin.com/in/ahmed-fakhfakh"
+  }
+}

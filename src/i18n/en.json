@@ -1,0 +1,120 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Ahmed Fakhfakh",
+    "subtitle": "Full-Stack Web Developer"
+  },
+  "home": {
+    "personal": "25 years / Tunisia / Freelance",
+    "aboutText": "I'm Ahmed, a 25-year-old full-stack developer from Tunisia. I turn coffee into code and bugs into sleepless nights. I love building apps so much, I once debugged in my dreams. I specialize in turning caffeine and Stack Overflow posts into fully functional apps — and occasionally, into stress.",
+    "services": "My Services",
+    "webDev": "Web Development",
+    "webDevDesc": "Building a custom tailored solution based on your technical specification.",
+    "seo": "SEO & Performance Optimization",
+    "seoDesc": "Making sure your app loads faster than you can say \"Time to First Byte\".",
+    "microservices": "Microservices & APIs",
+    "microservicesDesc": "Designing scalable backend systems with Spring Boot and Node.js that won't crash… much.",
+    "security": "Data & App Security",
+    "securityDesc": "Protecting your app like it's my Netflix password (aka: very seriously).",
+    "profileAlt": "Ahmed Fakhfakh - Developer"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Motivated and passionate software engineer specialized in web and mobile development, seeking a junior developer position in React.js or Node.js. Eager to contribute to impactful projects and grow within a dynamic team.",
+    "professionalTitle": "Professional Profile",
+    "experience": "My experience spans building responsive web applications with React.js, designing scalable backend architectures using Spring Boot, and implementing DevOps pipelines with Jenkins and Docker. I have also worked with Flutter in cross-platform contexts. I'm especially passionate about optimizing REST APIs, improving system performance, and delivering clean, efficient code across the stack.",
+    "educationTitle": "Education & Training",
+    "degree1": "National Engineering Degree in Software Engineering",
+    "school1": "ESPRIT - Private Higher School of Engineering and Technology, Tunis, 2018-2023",
+    "degree2": "Computer Science Baccalaureate",
+    "school2": "Lycée Rue ELAtriche, Ariana, 2018",
+    "languagesTitle": "Languages",
+    "arabic": "Arabic",
+    "native": "Native",
+    "english": "English",
+    "french": "French",
+    "problemSolving": "Problem Solving",
+    "problemSolvingDesc": "Analytical thinking to tackle complex technical challenges",
+    "teamwork": "Team Collaboration",
+    "teamworkDesc": "Effective cooperation in diverse development teams",
+    "communication": "Communication",
+    "communicationDesc": "Clearly expressing technical concepts to various audiences",
+    "adaptability": "Adaptability",
+    "adaptabilityDesc": "Quick adjustment to new technologies and requirements",
+    "techStackTitle": "My Tech Stack",
+    "langSectionTitle": "Languages",
+    "frontendTitle": "Frontend",
+    "devopsTitle": "DevOps & Tools",
+    "backendTitle": "Backend",
+    "databasesTitle": "Databases",
+    "architecturesTitle": "Architectures",
+    "certificationsTitle": "Certifications",
+    "viewCertificate": "View Certificate",
+    "certificateAlt": "Certificate",
+    "philosophyTitle": "My Philosophy",
+    "philosophyText": "I believe in creating web applications that are not only visually stunning but also highly functional and user-friendly. Every line of code should serve a purpose, and every design decision should enhance the user experience.",
+    "interestsTitle": "Beyond Coding",
+    "gaming": "Gaming",
+    "gamingDesc": "Passionate about video games, I love to play and create.",
+    "camping": "Camping",
+    "campingDesc": "I love to go camping and explore nature.",
+    "sport": "Sport",
+    "sportDesc": "I love to go to the gym and stay fit."
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "languages": "Languages: JavaScript, Java, PHP, Dart",
+    "frontend": "Frontend: React.js, Angular, Flutter",
+    "backend": "Backend: Node.js, Spring Boot",
+    "databases": "Databases: MySQL, MongoDB",
+    "devops": "DevOps & Tools: Docker, Jenkins, SonarQube, Prometheus, Grafana",
+    "methodologies": "Architectures: Microservices, REST APIs, CI/CD pipelines"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "tactic": {
+      "role": "Full-Stack Developer \u2013 Final Year Internship",
+      "company": "TAC-TIC (02/2023 \u2013 08/2023)",
+      "details": [
+        "Built a mobile app using Flutter and a web app with React.js.",
+        "Designed and implemented a scalable microservices architecture with Spring Boot.",
+        "Integrated CI/CD pipelines using Jenkins and Docker.",
+        "Optimized REST APIs, reducing response times by 30%."
+      ]
+    },
+    "beecoders": {
+      "role": "Full-Stack Developer \u2013 Engineering Internship",
+      "company": "Beecoders (06/2022 \u2013 08/2022)",
+      "details": [
+        "Developed a gaming e-commerce platform using React.js, Node.js, and MongoDB."
+      ]
+    },
+    "sisagri": {
+      "role": "Web Developer \u2013 Technician Internship",
+      "company": "Sisagri (06/2021 \u2013 08/2021)",
+      "details": [
+        "Created an e-commerce website for agricultural equipment sales and rentals."
+      ]
+    }
+  },
+  "projects": {
+    "title": "Key Projects",
+    "list": [
+      "DevOps CI/CD Project \u2013 Jenkins, Docker, SonarQube, Prometheus, Grafana (2022)",
+      "HR Web App \u2013 Angular, Spring Boot, MySQL (2021)",
+      "Multi-Platform Artist App \u2013 Symfony, JavaFX, CodeNameOne (2020)"
+    ]
+  },
+  "contact": {
+    "title": "Contact Me",
+    "email": "fakhfakh.ahmeed@gmail.com",
+    "phone": "+216 28 820 474",
+    "linkedin": "linkedin.com/in/ahmed-fakhfakh"
+  }
+}
