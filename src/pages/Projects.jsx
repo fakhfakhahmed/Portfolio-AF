@@ -16,92 +16,6 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'DevOps CI/CD Project',
-      description: 'Implemented CI/CD pipelines with Jenkins, Docker, SonarQube, Prometheus, and Grafana for automated testing, deployment, and monitoring.',
-      detailedDescription: 'This project focused on implementing robust DevOps practices for a microservices-based application. The CI/CD pipeline was designed to automate the entire software delivery process, from code commit to production deployment, with quality gates at each stage.',
-      features: [
-        'Containerized microservices architecture using Docker',
-        'Jenkins pipelines for continuous integration and deployment',
-        'Automated code quality checks with SonarQube',
-        'Comprehensive monitoring with Prometheus and Grafana dashboards',
-        'Infrastructure as Code using Terraform',
-        'Automated security scanning and vulnerability assessment'
-      ],
-      challenges: 'One of the main challenges was integrating various tools into a cohesive pipeline while ensuring security and compliance. I implemented a custom Jenkins shared library to standardize pipeline definitions across multiple services, and developed automated rollback mechanisms for failed deployments.',
-      technologies: ['Jenkins', 'Docker', 'SonarQube', 'Prometheus', 'Grafana', 'Terraform', 'Kubernetes'],
-      year: '2022',
-      link: 'https://github.com/fakhfakhahmed',
-      media: [
-        { type: 'video', src: project1Video },
-        { type: 'image', src: project1Image1 },
-        { type: 'image', src: project1Image2 }
-      ]
-    },
-    {
-      id: 2,
-      title: 'HR Web App',
-      description: 'Developed a human resources management application using Angular, Spring Boot, and MySQL database for efficient employee data management.',
-      detailedDescription: 'The HR Web App is a comprehensive human resources management system designed to streamline HR processes in medium to large organizations. The application provides modules for employee management, attendance tracking, performance evaluations, and recruitment.',
-      features: [
-        'Employee profile management with document storage',
-        'Attendance and leave management system',
-        'Performance review and goal tracking',
-        'Recruitment and applicant tracking',
-        'Role-based access control',
-        'Reporting and analytics dashboard'
-      ],
-      challenges: 'Creating a system that balanced ease of use with robust functionality was challenging. I implemented a modular architecture that allowed different HR departments to customize their workflows while maintaining data consistency across the platform.',
-      technologies: ['Angular', 'Spring Boot', 'MySQL', 'JWT', 'Hibernate', 'Bootstrap', 'Chart.js'],
-      year: '2021',
-      link: 'https://github.com/fakhfakhahmed',
-      media: [
-        { type: 'image', src: project2Image1 },
-        { type: 'image', src: project2Image2 }
-      ]
-    },
-    {
-      id: 3,
-      title: 'Multi-Platform Artist App',
-      description: 'Created a versatile application for artists using Symfony for web, JavaFX for desktop, and CodeNameOne for mobile platforms.',
-      detailedDescription: 'The Multi-Platform Artist App is designed to help digital artists manage their portfolios, track commissions, and connect with clients across different devices. The application maintains a consistent user experience while leveraging the native capabilities of each platform.',
-      features: [
-        'Portfolio management with customizable galleries',
-        'Commission tracking and invoicing system',
-        'Client communication and feedback tools',
-        'Cross-platform synchronization',
-        'Offline work capability with automatic syncing',
-        'Integration with popular social media platforms'
-      ],
-      challenges: 'Maintaining a consistent user experience and data model across three different platforms was the biggest challenge. I implemented a shared API layer and used platform-specific adapters to ensure consistent behavior while leveraging native platform capabilities.',
-      technologies: ['Symfony', 'JavaFX', 'CodeNameOne', 'MySQL', 'REST API', 'AWS S3'],
-      year: '2020',
-      media: [
-        { type: 'image', src: project1Image2 }
-      ]
-    },
-    {
-      id: 4,
-      title: 'HR Web Platform',
-      description: 'Angular, Spring Boot, MySQL based platform for HR management with comprehensive employee data tracking.',
-      detailedDescription: 'The HR Web Platform is an enterprise-grade solution for human resources departments that need comprehensive employee data management with advanced reporting capabilities. The platform was designed with large organizations in mind, supporting complex organizational structures and approval workflows.',
-      features: [
-        'Advanced employee record management',
-        'Customizable organizational chart',
-        'Time tracking and absence management',
-        'Integration with payroll systems',
-        'Compliance tracking and reporting',
-        'Custom workflow builder for HR processes'
-      ],
-      challenges: 'Handling complex organizational hierarchies and permission systems was particularly challenging. I developed a flexible data model that could represent various organizational structures while maintaining efficient queries for permissions and reporting.',
-      technologies: ['Angular', 'Spring Boot', 'MySQL', 'Redis', 'ElasticSearch', 'Docker'],
-      year: '2021',
-      media: [
-        { type: 'image', src: project2Image2 },
-        { type: 'image', src: project2Image1 }
-      ]
-    },
-    {
-      id: 5,
       title: 'Portfolio Website',
       description: 'A bilingual responsive portfolio website built with React, Tailwind CSS, and i18next for internationalization.',
       detailedDescription: 'This portfolio website showcases my work and skills as a full-stack developer. The site is built with React and uses Tailwind CSS for styling. It features a bilingual interface (English and French) using i18next for internationalization, ensuring content is accessible to a wider audience.',
@@ -115,10 +29,122 @@ const Projects = () => {
       ],
       challenges: 'Creating a seamless bilingual experience while maintaining an elegant UI was a key challenge. I implemented a context-based translation system and designed the UI to gracefully handle text length differences between languages.',
       technologies: ['React.js', 'Tailwind CSS', 'i18next', 'React Router', 'Vite'],
-      year: '2023',
+      year: '2025',
       media: [
         { type: 'image', src: project1Image1 },
         { type: 'image', src: project1Image2 }
+      ]
+    },
+    {
+      id: 2,
+      title: 'Budarent',
+      description: 'Developed a car rental web application with Angular, Node.js, and MongoDB featuring Google Maps integration, booking system, and admin dashboard.',
+      detailedDescription: 'Budarent is a comprehensive car rental platform built in collaboration with Abdelmoementrabelsi. The application allows users to browse available vehicles, make reservations, and manage their bookings. It features an interactive map interface using Google Maps API for location-based vehicle selection, a secure authentication system with JWT, and a robust booking management system. The admin dashboard provides complete control over the rental fleet, user accounts, and reservation data.',
+      features: [
+        'Interactive vehicle browsing with detailed specifications',
+        'Location-based car rental using Google Maps integration',
+        'Secure user authentication and authorization with JWT',
+        'Comprehensive booking system with availability calendar',
+        'Payment processing and invoice generation',
+        'Admin dashboard for fleet and reservation management',
+        'User reviews and ratings for vehicles',
+        'Multi-language support for international users'
+      ],
+      challenges: 'A significant challenge was implementing the real-time availability system that needed to account for bookings, maintenance schedules, and vehicle locations. We developed a custom algorithm to optimize vehicle assignment based on proximity and availability, reducing customer wait times by 25%.',
+      technologies: [
+        'Angular', 'Node.js', 'Express', 'MongoDB', 'JWT', 
+        'Google Maps API', 'Socket.io', 'Stripe', 'Docker'
+      ],
+      year: '2025',
+      link: 'https://github.com/fakhfakhahmed',
+      media: [
+        { type: 'image', src: project1Image1 },
+        { type: 'image', src: project1Image2 },
+        { type: 'image', src: project2Image1 }
+      ]
+    },
+    {
+      id: 3,
+      title: 'Raskelni',
+      description: 'Built a recycling app with mobile (Flutter) and web (React.js) interfaces, promoting environmental sustainability through a reward-based system in Tunisia.',
+      detailedDescription: 'Raskelni is a recycling platform developed to encourage eco-friendly behavior by allowing users to sell and buy recyclable items such as bottles and cartons. The application integrates a reward system that incentivizes users for every delivery. Designed with a scalable microservices architecture using Spring Boot, the system ensures efficient communication and maintainability. CI/CD pipelines automate the delivery process using Jenkins and Docker, while REST APIs were optimized to reduce response times by 30%.',
+      features: [
+        'Mobile app built using Flutter',
+        'Web application developed with React.js',
+        'Microservices architecture with Spring Boot',
+        'Reward system for users recycling bottles and cartons',
+        'Integrated CI/CD pipelines using Jenkins and Docker',
+        'Optimized REST APIs for performance and scalability',
+        'Secure user authentication and role-based access',
+        'Location-based delivery tracking system'
+      ],
+      challenges: 'A key challenge was maintaining consistent performance across both mobile and web platforms while handling user rewards and logistics. To address this, services were modularized, APIs were optimized, and CI/CD automation was introduced to streamline testing and deployments.',
+      technologies: [
+        'Flutter', 'React.js', 'Spring Boot', 'Jenkins', 'Docker',
+        'MySQL', 'MongoDB', 'RabbitMQ', 'Eureka', 'Grafana', 'Prometheus'
+      ],
+      year: '2024',
+      link: 'https://github.com/fakhfakhahmed',
+      media: [
+        { type: 'video', src: project1Video },
+        { type: 'image', src: project1Image1 },
+        { type: 'image', src: project1Image1 },
+        { type: 'image', src: project1Image1 },
+        { type: 'image', src: project1Image2 }
+      ]
+    },
+    {
+      id: 4,
+      title: 'GameZone',
+      description: 'Developed a gaming e-commerce platform allowing users to browse, purchase, and review video games using React.js, Node.js, and MongoDB.',
+      detailedDescription: 'GameZone is a full-stack e-commerce platform tailored for the gaming community. The application allows users to create accounts, explore a wide range of video games, make purchases, and leave reviews. It includes features such as a shopping cart, secure payment gateway integration, admin dashboard for managing products and orders, and real-time stock management. The frontend was built with React.js, providing a responsive and dynamic user experience, while the backend used Node.js with Express and MongoDB for flexible, scalable data storage.',
+      features: [
+        'Interactive and responsive UI built with React.js',
+        'RESTful APIs using Node.js and Express',
+        'Product catalog with categories, search, and filtering',
+        'Secure user authentication and authorization',
+        'Shopping cart and checkout system with payment integration',
+        'Admin dashboard for managing inventory and orders',
+        'User reviews and ratings for games',
+        'Real-time inventory and order tracking'
+      ],
+      challenges: 'One of the main challenges was implementing a real-time inventory management system that could handle concurrent user actions without overselling. The solution involved implementing optimistic UI updates with server-side validation and a queue-based transaction system for processing orders.',
+      technologies: [
+        'React.js', 'Redux', 'Node.js', 'Express', 'MongoDB',
+        'JWT', 'Socket.io', 'Stripe', 'AWS S3'
+      ],
+      year: '2022',
+      link: 'https://github.com/fakhfakhahmed',
+      media: [
+        { type: 'image', src: project2Image1 },
+        { type: 'image', src: project2Image2 }
+      ]
+    },
+    {
+      id: 5,
+      title: 'Boostra',
+      description: 'Developed a collaborative workplace platform that facilitates communication, project coordination, and employee engagement within companies.',
+      detailedDescription: 'Boostra is a comprehensive collaboration platform designed to enhance workplace connectivity and streamline operations within organizations. The application focuses on facilitating teamwork, knowledge sharing, and efficient communication between employees and departments. It provides features for project collaboration, document sharing, real-time messaging, and company-wide announcements. Built with Angular on the frontend for a responsive user experience and Spring Boot backend for secure data processing, Boostra helps companies create a more connected and productive work environment.',
+      features: [
+        'Comprehensive employee management system',
+        'Performance tracking and evaluation tools',
+        'Scheduling and time management',
+        'Company-wide communication platform',
+        'Department-specific coordination tools',
+        'Advanced workforce analytics and reporting',
+        'Document management and sharing',
+        'Customizable workflow automation'
+      ],
+      challenges: 'The main challenge was creating a secure yet flexible system that could adapt to different organizational structures while maintaining data privacy. We implemented role-based access controls and designed a modular architecture that allows customization without compromising the core functionality.',
+      technologies: [
+        'Angular', 'TypeScript', 'Spring Boot', 'Java', 'MySQL',
+        'Redis', 'WebSockets', 'JWT', 'Docker'
+      ],
+      year: '2021',
+      link: 'https://github.com/fakhfakhahmed',
+      media: [
+        { type: 'image', src: project1Image1 },
+        { type: 'image', src: project2Image1 }
       ]
     }
   ];
