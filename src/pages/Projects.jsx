@@ -1,16 +1,63 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 import ProjectCard from '../components/ProjectCard';
+import ProjectsCarousel from '../components/ProjectsCarousel';
+import GitHubProfile from '../components/GitHubProfile';
+import GitHubActivity from '../components/GitHubActivity';
+import ProjectDetailsPopup from '../components/ProjectDetailsPopup';
 
 // Import project media
-import project1Video from '../assets/projects/project1-video.mp4';
-import project1Image1 from '../assets/projects/project1-image1.jpg';
-import project1Image2 from '../assets/projects/project1-image2.jpg';
-import project2Image1 from '../assets/projects/project2-image1.jpg';
-import project2Image2 from '../assets/projects/project2-image2.jpg';
+// Portfolio Website
+import portfolioGif from '../assets/projects/Portfolio Website/brave_CxTzltUxdb.gif';
+import portfolioImg1 from '../assets/projects/Portfolio Website/Screenshot 2025-05-27 142647.png';
+import portfolioImg2 from '../assets/projects/Portfolio Website/Screenshot 2025-05-27 142725.png';
+import portfolioImg3 from '../assets/projects/Portfolio Website/Screenshot 2025-05-27 142752.png';
+// Raskelni
+import raskelniGif from '../assets/projects/Raskelni/raskelni.gif';
+import raskelniImg1 from '../assets/projects/Raskelni/MobileDemandeAccpeter.png';
+import raskelniImg2 from '../assets/projects/Raskelni/MobileHome.png';
+import raskelniImg3 from '../assets/projects/Raskelni/MobileLivreurPaiments.png';
+import raskelniImg4 from '../assets/projects/Raskelni/MobileSuiviLesDemande.png';
+import raskelniImg5 from '../assets/projects/Raskelni/UserAddProduct.png';
+import raskelniImg6 from '../assets/projects/Raskelni/UserAddProductPOPUP.png';
+import raskelniImg7 from '../assets/projects/Raskelni/UserSubmitDemande.png';
+// Boostra
+import boostraImg1 from '../assets/projects/Boostra/1.png';
+import boostraImg2 from '../assets/projects/Boostra/2.png';
+import boostraImg3 from '../assets/projects/Boostra/278924760_839178530372415_5549002044770435650_n.png';
+import boostraImg4 from '../assets/projects/Boostra/NEWSFEED_Copy.png';
+import boostraImg5 from '../assets/projects/Boostra/quiz.png';
+// GameZone
+import gamezoneImg1 from '../assets/projects/GameZone/BLOG.png';
+import gamezoneImg2 from '../assets/projects/GameZone/EVENT.png';
+import gamezoneImg3 from '../assets/projects/GameZone/HOME.png';
+import gamezoneImg4 from '../assets/projects/GameZone/LOGIN.png';
+import gamezoneImg5 from '../assets/projects/GameZone/LOGIN2.png';
+import gamezoneImg6 from '../assets/projects/GameZone/PRODUCT.png';
+// Budarent
+import budarentImg1 from '../assets/projects/Budarent/admindashbordcars.png';
+import budarentImg2 from '../assets/projects/Budarent/booking.png';
+import budarentImg3 from '../assets/projects/Budarent/card_details_and_reviews.png';
+import budarentImg4 from '../assets/projects/Budarent/cars.png';
+import budarentImg5 from '../assets/projects/Budarent/home.png';
+import budarentImg6 from '../assets/projects/Budarent/userprofile.png';
 
 const Projects = () => {
   const { t } = useTranslation();
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [showDetailsPopup, setShowDetailsPopup] = useState(false);
+  
+  // Function to open project details popup
+  const openProjectDetails = (project) => {
+    setSelectedProject(project);
+    setShowDetailsPopup(true);
+  };
+  
+  // Function to close project details popup
+  const closeProjectDetails = () => {
+    setShowDetailsPopup(false);
+  };
 
   // Project data
   const projects = [
@@ -31,8 +78,10 @@ const Projects = () => {
       technologies: ['React.js', 'Tailwind CSS', 'i18next', 'React Router', 'Vite'],
       year: '2025',
       media: [
-        { type: 'image', src: project1Image1 },
-        { type: 'image', src: project1Image2 }
+        { type: 'image', src: portfolioGif },
+        { type: 'image', src: portfolioImg1 },
+        { type: 'image', src: portfolioImg2 },
+        { type: 'image', src: portfolioImg3 }
       ]
     },
     {
@@ -58,9 +107,12 @@ const Projects = () => {
       year: '2025',
       link: 'https://github.com/fakhfakhahmed',
       media: [
-        { type: 'image', src: project1Image1 },
-        { type: 'image', src: project1Image2 },
-        { type: 'image', src: project2Image1 }
+        { type: 'image', src: budarentImg1 },
+        { type: 'image', src: budarentImg2 },
+        { type: 'image', src: budarentImg3 },
+        { type: 'image', src: budarentImg4 },
+        { type: 'image', src: budarentImg5 },
+        { type: 'image', src: budarentImg6 }
       ]
     },
     {
@@ -86,11 +138,14 @@ const Projects = () => {
       year: '2024',
       link: 'https://github.com/fakhfakhahmed',
       media: [
-        { type: 'video', src: project1Video },
-        { type: 'image', src: project1Image1 },
-        { type: 'image', src: project1Image1 },
-        { type: 'image', src: project1Image1 },
-        { type: 'image', src: project1Image2 }
+        { type: 'image', src: raskelniGif },
+        { type: 'image', src: raskelniImg1 },
+        { type: 'image', src: raskelniImg2 },
+        { type: 'image', src: raskelniImg3 },
+        { type: 'image', src: raskelniImg4 },
+        { type: 'image', src: raskelniImg5 },
+        { type: 'image', src: raskelniImg6 },
+        { type: 'image', src: raskelniImg7 }
       ]
     },
     {
@@ -116,8 +171,12 @@ const Projects = () => {
       year: '2022',
       link: 'https://github.com/fakhfakhahmed',
       media: [
-        { type: 'image', src: project2Image1 },
-        { type: 'image', src: project2Image2 }
+        { type: 'image', src: gamezoneImg1 },
+        { type: 'image', src: gamezoneImg2 },
+        { type: 'image', src: gamezoneImg3 },
+        { type: 'image', src: gamezoneImg4 },
+        { type: 'image', src: gamezoneImg5 },
+        { type: 'image', src: gamezoneImg6 }
       ]
     },
     {
@@ -143,8 +202,11 @@ const Projects = () => {
       year: '2021',
       link: 'https://github.com/fakhfakhahmed',
       media: [
-        { type: 'image', src: project1Image1 },
-        { type: 'image', src: project2Image1 }
+        { type: 'image', src: boostraImg1 },
+        { type: 'image', src: boostraImg2 },
+        { type: 'image', src: boostraImg3 },
+        { type: 'image', src: boostraImg4 },
+        { type: 'image', src: boostraImg5 }
       ]
     }
   ];
@@ -152,37 +214,39 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-rn-dark text-white">
       {/* Projects Header */}
-      <section className="py-20 max-w-screen-xl mx-auto px-6">
-        <h1 className="text-4xl md:text-5xl font-bold mb-12 uppercase tracking-tight">my projects</h1>
-        <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed mb-16">
+      <section className="py-10 sm:py-16 md:py-20 max-w-screen-xl mx-auto px-4 sm:px-6">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 md:mb-12 uppercase tracking-tight">my projects</h1>
+        <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed mb-8 sm:mb-12 md:mb-16">
           Below is a selection of projects I've worked on. Each one represents a unique challenge 
           and showcases different aspects of my technical abilities and problem-solving skills.
         </p>
       </section>
 
+      {/* GitHub Profile */}
+      <GitHubProfile username="fakhfakhahmed" />
+
       {/* Projects Grid */}
       <section className="py-12">
         <div className="max-w-screen-xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {projects.map(project => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
+          <ProjectsCarousel 
+            projects={projects} 
+            onViewDetails={openProjectDetails} 
+          />
         </div>
       </section>
       
       {/* Additional Projects Section */}
-      <section className="py-20 bg-rn-gray">
-        <div className="max-w-screen-xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 uppercase tracking-tight">other works</h2>
+      <section className="py-10 sm:py-16 md:py-20 bg-rn-gray">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 md:mb-12 uppercase tracking-tight">other works</h2>
           
-          <ul className="space-y-6 max-w-4xl">
+          <ul className="space-y-4 sm:space-y-6 max-w-4xl">
             {t('projects.list', { returnObjects: true }).map((project, index) => (
-              <li key={index} className="flex flex-col md:flex-row md:items-center justify-between p-6 border border-gray-200 hover:border-black transition-colors">
-                <div className="mb-4 md:mb-0">
-                  <h3 className="text-xl font-bold">{project}</h3>
+              <li key={index} className="flex flex-col md:flex-row md:items-center justify-between p-4 sm:p-6 border border-gray-700 hover:border-red-600 transition-colors rounded-md">
+                <div className="mb-3 md:mb-0">
+                  <h3 className="text-lg sm:text-xl font-bold">{project}</h3>
                 </div>
-                <a href="#" className="inline-block text-sm uppercase tracking-wider font-medium border-b border-black pb-1 hover:text-gray-600 transition-colors self-start md:self-center">
+                <a href="#" className="inline-block text-xs sm:text-sm uppercase tracking-wider font-medium border-b border-transparent hover:border-red-600 pb-1 hover:text-red-500 transition-colors self-start md:self-center">
                   Details
                 </a>
               </li>
@@ -191,23 +255,15 @@ const Projects = () => {
         </div>
       </section>
       
-      {/* GitHub Section */}
-      <section className="py-20">
-        <div className="max-w-screen-xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-8">Explore More on GitHub</h2>
-          <p className="text-xl max-w-3xl mx-auto mb-12">
-            Check out my GitHub repositories for more projects, contributions, and code samples.
-          </p>
-          <a 
-            href="https://github.com" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-3 bg-black text-white text-sm uppercase tracking-widest font-medium hover:bg-gray-800 transition-colors"
-          >
-            Visit GitHub Profile
-          </a>
-        </div>
-      </section>
+      {/* GitHub Activity Section */}
+      <GitHubActivity username="fakhfakhahmed" />
+      
+      {/* Project Details Popup (rendered at the page level) */}
+      <ProjectDetailsPopup
+        isOpen={showDetailsPopup}
+        onClose={closeProjectDetails}
+        project={selectedProject}
+      />
     </div>
   );
 };

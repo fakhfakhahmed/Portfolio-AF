@@ -1,69 +1,74 @@
-import React, { useEffect, useRef, useState, memo } from 'react';
+import React, { useState, useEffect, useRef, memo } from 'react';
 import '../assets/styles/project-details-popup.css';
 import { lazyLoadVideo } from '../utils/lazyLoading';
 
 const ProjectDetailsPopup = ({ isOpen, onClose, project }) => {
   const popupRef = useRef(null);
+  const videoRef = useRef(null);
   const [activeMediaIndex, setActiveMediaIndex] = useState(0);
   const [isImageLoading, setIsImageLoading] = useState(true);
-  const videoRef = useRef(null);
 
+  // Reset state when project changes
   useEffect(() => {
-    // Reset state when project changes
-    setActiveMediaIndex(0);
-    setIsImageLoading(true);
+    if (project) {
+      setActiveMediaIndex(0);
+      setIsImageLoading(true);
+    }
   }, [project]);
 
+  // Handle body overflow
   useEffect(() => {
-    // Handle click outside to close popup
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
+  // Handle click outside and ESC key
+  useEffect(() => {
+    if (!isOpen) return;
+    
     const handleClickOutside = (event) => {
       if (popupRef.current && !popupRef.current.contains(event.target)) {
         onClose();
       }
     };
 
-    // Handle ESC key to close popup
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
         onClose();
       }
     };
 
-    // Add event listeners when popup is open
-    if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.addEventListener('keydown', handleKeyDown);
-      // Prevent scrolling of the body when popup is open
-      document.body.style.overflow = 'hidden';
-    }
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
 
-    // Cleanup event listeners
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('keydown', handleKeyDown);
-      // Restore scrolling when popup is closed
-      document.body.style.overflow = 'auto';
     };
   }, [isOpen, onClose]);
 
-  // Lazy load and start video when it's the active media
+  // Handle video loading and playback
   useEffect(() => {
-    if (!project || !isOpen) return;
+    if (!isOpen || !project) return;
     
-    const currentMedia = project.media[activeMediaIndex];
-    if (videoRef.current && currentMedia && currentMedia.type === 'video') {
-      // Lazy load the video
+    const currentMedia = project.media?.[activeMediaIndex];
+    if (videoRef.current && currentMedia?.type === 'video') {
       if (!videoRef.current.src) {
         lazyLoadVideo(videoRef.current, currentMedia.src);
       }
       
-      // Play the video
       videoRef.current.play().catch(error => {
         console.log('Video autoplay failed:', error);
       });
     }
     
-    // Cleanup function to pause videos when component unmounts or media changes
     return () => {
       if (videoRef.current) {
         videoRef.current.pause();
@@ -71,61 +76,44 @@ const ProjectDetailsPopup = ({ isOpen, onClose, project }) => {
     };
   }, [activeMediaIndex, project, isOpen]);
 
-  if (!isOpen || !project) return null;
+  // Early return if not open or no project
+  if (!isOpen || !project) {
+    return null;
+  }
 
   const goToPrevious = () => {
     setActiveMediaIndex((prev) => 
-      prev === 0 ? project.media.length - 1 : prev - 1
+      prev === 0 ? (project.media?.length || 1) - 1 : prev - 1
     );
   };
 
   const goToNext = () => {
     setActiveMediaIndex((prev) => 
-      prev === project.media.length - 1 ? 0 : prev + 1
+      prev === (project.media?.length || 1) - 1 ? 0 : prev + 1
     );
   };
 
   const renderMedia = () => {
-    if (!project || !project.media || project.media.length === 0) {
+    if (!project.media || project.media.length === 0) {
       return <div className="no-media">No media available</div>;
     }
     
     const currentMedia = project.media[activeMediaIndex];
-    
-    if (currentMedia.type === 'video') {
-      // Find an image to use as poster
-      const posterImage = project.media.find(m => m.type === 'image')?.src;
-      
-      return (
-        <video 
-          ref={videoRef}
-          // src is loaded via lazyLoadVideo in the effect
-          className="media-item"
-          muted
-          loop
-          playsInline
-          controls
-          poster={posterImage}
-          preload="metadata"
+    return (
+      <div className="image-container">
+        {isImageLoading && <div className="loading-spinner"></div>}
+        <img 
+          src={currentMedia.src} 
+          alt={`${project.title} - Image ${activeMediaIndex + 1}`} 
+          className={`media-item ${isImageLoading ? 'loading' : ''}`}
+          onLoad={() => setIsImageLoading(false)}
+          onError={() => setIsImageLoading(false)}
+          loading="lazy"
+          decoding="async"
         />
-      );
-    } else {
-      return (
-        <div className="image-container">
-          {isImageLoading && <div className="loading-spinner"></div>}
-          <img 
-            src={currentMedia.src} 
-            alt={`${project.title} - Image ${activeMediaIndex + 1}`} 
-            className={`media-item ${isImageLoading ? 'loading' : ''}`}
-            onLoad={() => setIsImageLoading(false)}
-            onError={() => setIsImageLoading(false)}
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-      );
-    }
-  };
+      </div>
+    );
+  }
 
   return (
     <div className="project-popup-overlay">

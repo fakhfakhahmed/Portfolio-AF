@@ -74,24 +74,24 @@ const About = () => {
               <br/> <br/>
             </div>
             <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">{t('about.languagesTitle')}</h2>
-            <div className="flex items-center mb-6">
-              <div className="mr-6">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center mb-6">
+              <div className="mb-4 sm:mb-0 sm:mr-6">
                 <h3 className="text-lg sm:text-xl font-semibold">{t('about.arabic')}</h3>
                 <p className="text-gray-400">{t('about.native')}</p>
               </div>
               
-              <div className="mx-1 h-10 w-px bg-white"></div>
+              <div className="hidden sm:block mx-1 h-10 w-px bg-white"></div>
               
-              <div className="mx-6">
+              <div className="mb-4 sm:mb-0 sm:mx-6">
                 <h3 className="text-xl font-semibold">{t('about.english')}</h3>
-                <p className="text-gray-400">B2</p>
+                <p className="text-gray-400">Upper-Intermediate</p>
               </div>
               
-              <div className="mx-1 h-10 w-px bg-white"></div>
+              <div className="hidden sm:block mx-1 h-10 w-px bg-white"></div>
               
-              <div className="ml-6">
+              <div className="sm:ml-6">
                 <h3 className="text-xl font-semibold">{t('about.french')}</h3>
-                <p className="text-gray-400">B2</p>
+                <p className="text-gray-400">Upper-Intermediate</p>
               </div>
             </div>
           </div>
@@ -99,23 +99,22 @@ const About = () => {
         
            {/* Soft Skills Section */}
            <div className="mb-16">
-            
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="bg-rn-gray p-4 rounded-lg">
                 <h3 className="text-xl font-semibold mb-2">{t('about.problemSolving')}</h3>
-                <p className="text-gray-400">{t('about.problemSolvingDesc')}</p>
+                <p className="text-gray-400 text-sm">{t('about.problemSolvingDesc')}</p>
               </div>
               <div className="bg-rn-gray p-4 rounded-lg">
                 <h3 className="text-xl font-semibold mb-2">{t('about.teamwork')}</h3>
-                <p className="text-gray-400">{t('about.teamworkDesc')}</p>
+                <p className="text-gray-400 text-sm">{t('about.teamworkDesc')}</p>
               </div>
               <div className="bg-rn-gray p-4 rounded-lg">
                 <h3 className="text-xl font-semibold mb-2">{t('about.communication')}</h3>
-                <p className="text-gray-400">{t('about.communicationDesc')}</p>
+                <p className="text-gray-400 text-sm">{t('about.communicationDesc')}</p>
               </div>
               <div className="bg-rn-gray p-4 rounded-lg">
                 <h3 className="text-xl font-semibold mb-2">{t('about.adaptability')}</h3>
-                <p className="text-gray-400">{t('about.adaptabilityDesc')}</p>
+                <p className="text-gray-400 text-sm">{t('about.adaptabilityDesc')}</p>
               </div>
             </div>
           </div>

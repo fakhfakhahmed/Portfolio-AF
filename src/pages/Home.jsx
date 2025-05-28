@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import profilePhoto from '../assets/279787631_1225434571324131_2014762143615193992_n.jpg';
@@ -6,6 +6,16 @@ import styles from '../assets/styles/ProfileImage.module.css';
 
 const Home = () => {
   const { t } = useTranslation();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 500);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 500);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className="flex flex-col-reverse md:flex-row w-full min-h-screen relative overflow-hidden">
@@ -111,24 +121,37 @@ const Home = () => {
       </div>
       
       {/* Image Area - left side */}
-      <div className="w-full md:w-1/2 relative overflow-hidden">
-        {/* Black Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-rn-dark to-transparent z-10"></div>
-        
-        {/* Profile Image */}
-        <div className={styles.imageContainer}>
-          <img 
-            src={profilePhoto} 
-            alt={t('home.profileAlt')} 
-            className={styles.profileImage}
-          />
+      {!isMobile ? (
+        <div className="w-full md:w-1/2 relative overflow-hidden">
+          {/* Black Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-rn-dark to-transparent z-10"></div>
+          
+          {/* Profile Image */}
+          <div className={styles.imageContainer}>
+            <img 
+              src={profilePhoto} 
+              alt={t('home.profileAlt')} 
+              className={styles.profileImage}
+            />
+          </div>
+          
+          {/* Name Overlay */}
+          <div className="absolute bottom-20 left-10 z-20">
+            <h1 className="text-5xl md:text-7xl font-bold text-white">Ahmed <br/> Fakhfakh</h1>
+          </div>
         </div>
-        
-        {/* Name Overlay */}
-        <div className="absolute bottom-20 left-10 z-20">
-          <h1 className="text-5xl md:text-7xl font-bold text-white">Ahmed <br/> Fakhfakh</h1>
+      ) : (
+        /* Mobile Avatar Display */
+        <div className="flex flex-col items-center mt-16 mb-12">
+          <div className="w-40 h-40 mb-6 relative">
+            <img 
+              src={profilePhoto} 
+              alt={t('home.profileAlt')} 
+              className="w-40 h-40 rounded-full object-cover border-4 border-red-600 shadow-lg"
+            />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

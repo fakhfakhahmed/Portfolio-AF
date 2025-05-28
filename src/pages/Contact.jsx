@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import cvPDF from '../assets/Ahmed-Fakhfakh-English-CV.pdf';
 
 const Contact = () => {
   const { t } = useTranslation();
+  const formRef = useRef(null);
   
   // Form state
   const [formData, setFormData] = useState({
@@ -16,12 +18,16 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitResult, setSubmitResult] = useState({ status: null, message: '' });
   
+  // CV download state
+  const [isHovered, setIsHovered] = useState(false);
+  const [isDownloading, setIsDownloading] = useState(false);
+  
   // Handle form input changes
   const handleChange = (e) => {
-    const { id, value } = e.target;
+    const { name, value } = e.target;
     setFormData(prevData => ({
       ...prevData,
-      [id]: value
+      [name]: value
     }));
     
     // Clear any previous submit result when user starts typing again
@@ -30,12 +36,6 @@ const Contact = () => {
     }
   };
   
-  // Check if we're in development mode
-  const isDev = () => {
-    return window.location.hostname === 'localhost' || 
-           window.location.hostname === '127.0.0.1';
-  };
-
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -53,102 +53,51 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitResult({ status: null, message: '' });
 
-    // DEVELOPMENT MODE FALLBACK
-    // In development, use mailto: as a fallback since serverless functions won't work locally
-    if (isDev()) {
-      try {
-        // Simulate network delay
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        // Create email content
-        const subject = encodeURIComponent(formData.subject || 'Contact from Portfolio Website');
-        const body = encodeURIComponent(
-          `Name: ${formData.name}\n\n` +
-          `Email: ${formData.email}\n\n` +
-          `Message:\n${formData.message}`
-        );
-        
-        // Open default email client
-        window.location.href = `mailto:fakhfakh.ahmeed@gmail.com?subject=${subject}&body=${body}`;
-        
-        // Show success message
-        setSubmitResult({ 
-          status: 'success', 
-          message: 'Development mode: Email client opened. In production, this would be sent via SendGrid.' 
-        });
-        
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-        });
-      } catch (error) {
-        console.error('Error in dev mode:', error);
-        setSubmitResult({ 
-          status: 'error', 
-          message: 'Failed to open email client. Please try again.' 
-        });
-      } finally {
-        setIsSubmitting(false);
-      }
-      return;
-    }
-    
-    // PRODUCTION MODE - Use Netlify function with SendGrid
-    try {      
-      // Send data to our serverless function
-      const response = await fetch('/.netlify/functions/sendEmail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+    try {
+      // Submit the form using the browser's built-in form submission
+      // FormSubmit.co will handle the email delivery
+      formRef.current.submit();
+      
+      // Show success message
+      setSubmitResult({ 
+        status: 'success', 
+        message: 'Your message has been sent successfully!' 
       });
       
-      let data;
-      const responseText = await response.text();
-      
-      try {
-        // Try to parse JSON response
-        data = JSON.parse(responseText);
-      } catch (e) {
-        // If parsing fails, use text as message
-        data = { message: responseText || 'Unknown error occurred' };
-      }
-      
-      if (response.ok) {
-        // Success
-        setSubmitResult({ 
-          status: 'success', 
-          message: 'Your message has been sent successfully!' 
-        });
-        
-        // Reset form after successful submission
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-        });
-      } else {
-        // API returned an error
-        setSubmitResult({ 
-          status: 'error', 
-          message: data.message || 'Failed to send message. Please try again.' 
-        });
-      }
+      // Reset form after successful submission
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
     } catch (error) {
-      // Network or other error
       console.error('Error sending message:', error);
-      setSubmitResult({ 
-        status: 'error', 
-        message: 'Failed to send message. Please try again later.' 
+      setSubmitResult({
+        status: 'error',
+        message: 'An unexpected error occurred. Please try contacting directly at fakhfakh.ahmeed@gmail.com'
       });
     } finally {
       setIsSubmitting(false);
     }
+  };
+  
+  // Handle CV download
+  const handleDownload = () => {
+    setIsDownloading(true);
+    
+    // Simulate download delay for animation
+    setTimeout(() => {
+      setIsDownloading(false);
+    }, 1500);
+    
+    // Create a temporary link element to trigger the download
+    const link = document.createElement('a');
+    link.href = cvPDF;
+    link.download = 'Ahmed-Fakhfakh-CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -165,76 +114,138 @@ const Contact = () => {
       <section className="py-12 bg-rn-gray">
         <div className="max-w-screen-xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Contact Form */}
+              {/* Contact Form */}
             <div>
               <h2 className="text-2xl font-bold mb-8">Send a Message</h2>
-              <form className="space-y-6" onSubmit={handleSubmit}>
-                {/* Form submission status message */}
-                {submitResult.status && (
-                  <div className={`p-4 rounded ${submitResult.status === 'success' ? 'bg-green-800 text-green-100' : 'bg-red-800 text-red-100'}`}>
-                    {submitResult.message}
-                  </div>
-                )}
+              {/* Form submission status message */}
+              {submitResult.status && (
+                <div className={`p-4 mb-6 rounded ${submitResult.status === 'success' ? 'bg-green-800 text-green-100' : 'bg-red-800 text-red-100'}`}>
+                  {submitResult.message}
+                </div>
+              )}
+
+              {/* Custom Contact Form that matches site theme */}
+              <form 
+                ref={formRef}
+                onSubmit={handleSubmit} 
+                className="space-y-6 relative overflow-hidden rounded-lg border border-gray-700 p-6 transition-all duration-300 hover:border-rn-accent/30 mb-8 bg-rn-light-gray/20"
+                action="https://formsubmit.co/fakhfakh.ahmeed@gmail.com" 
+                method="POST"
+              >
+                {/* FormSubmit.co configuration */}
+                <input type="hidden" name="_subject" value="New message from your portfolio website" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://fakhfakhahmed.github.io/Portfolio-AF/thanks" />
+                
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">Name <span className="text-red-500">*</span></label>
                   <input 
                     type="text" 
-                    id="name" 
+                    id="name"
+                    name="name" 
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-700 bg-rn-light-gray text-white focus:outline-none focus:border-rn-accent" 
+                    className="w-full px-4 py-3 border border-gray-700 bg-rn-light-gray text-white focus:outline-none focus:border-rn-accent rounded-md" 
                     placeholder="Your name"
                     required
                   />
                 </div>
+                
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">Email <span className="text-red-500">*</span></label>
                   <input 
                     type="email" 
-                    id="email" 
+                    id="email"
+                    name="email" 
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-700 bg-rn-light-gray text-white focus:outline-none focus:border-rn-accent" 
+                    className="w-full px-4 py-3 border border-gray-700 bg-rn-light-gray text-white focus:outline-none focus:border-rn-accent rounded-md" 
                     placeholder="Your email address"
                     required
                   />
                 </div>
+                
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-1">Subject</label>
                   <input 
                     type="text" 
-                    id="subject" 
+                    id="subject"
+                    name="subject" 
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-700 bg-rn-light-gray text-white focus:outline-none focus:border-rn-accent" 
+                    className="w-full px-4 py-3 border border-gray-700 bg-rn-light-gray text-white focus:outline-none focus:border-rn-accent rounded-md" 
                     placeholder="Subject of your message"
                   />
                 </div>
+                
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">Message <span className="text-red-500">*</span></label>
                   <textarea 
-                    id="message" 
+                    id="message"
+                    name="message" 
                     rows="6" 
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-700 bg-rn-light-gray text-white focus:outline-none focus:border-rn-accent" 
+                    className="w-full px-4 py-3 border border-gray-700 bg-rn-light-gray text-white focus:outline-none focus:border-rn-accent rounded-md" 
                     placeholder="Your message"
                     required
                   ></textarea>
                 </div>
-                <button 
-                  type="submit" 
-                  disabled={isSubmitting}
-                  className={`px-8 py-3 bg-rn-accent text-white text-sm uppercase tracking-widest font-medium hover:bg-rn-dark hover:border hover:border-rn-accent transition-colors ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <span className="inline-block animate-pulse mr-2">⟳</span>
-                      Sending...
-                    </>
-                  ) : 'Send Message'}
-                </button>
+                
+                <div className="absolute top-0 right-0 -mt-2 -mr-2 h-16 w-16 opacity-10">
+                  <div className="relative h-full w-full">
+                    <div className="absolute rotate-45 transform bg-rn-accent h-8 w-32 right-0 top-0"></div>
+                  </div>
+                </div>
+                
+                <div className="flex justify-end">
+                  <button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className={`px-8 py-3 bg-rn-accent text-white text-sm uppercase tracking-widest font-medium hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rn-accent rounded-md ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                  >
+                    {isSubmitting ? (
+                      <span className="flex items-center">
+                        <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
+                      </span>
+                    ) : 'Send Message'}
+                  </button>
+                </div>
               </form>
+
+              <div className="mt-8 flex justify-center">
+                <button 
+                  type="button" 
+                  onClick={handleDownload}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  className={`relative overflow-hidden group px-8 py-3 ${isDownloading ? 'bg-green-600 text-white' : 'border border-rn-accent text-rn-accent'} text-sm uppercase tracking-widest font-medium hover:bg-rn-accent hover:text-white transition-colors focus:outline-none`}
+                  disabled={isDownloading}
+                >
+                  {isDownloading ? (
+                    <div className="flex items-center justify-center gap-2">
+                      <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      <span>Downloading...</span>
+                    </div>
+                  ) : (
+                    <div className="flex items-center justify-center gap-2">
+                      <svg className={`w-4 h-4 ${isHovered ? 'animate-bounce' : ''} transition-all duration-300`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd"></path>
+                      </svg>
+                      <span>Download CV</span>
+                    </div>
+                  )}
+                  <span className="absolute inset-0 h-full w-full bg-white opacity-0 group-hover:opacity-10 group-hover:animate-pulse"></span>
+                </button>
+              </div>
             </div>
             
             {/* Contact Information */}
@@ -272,7 +283,7 @@ const Contact = () => {
                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rn-accent transition-colors">
                       <span className="sr-only">Twitter</span>
                       <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085a4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
                       </svg>
                     </a>
                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rn-accent transition-colors">
@@ -307,5 +318,7 @@ const Contact = () => {
     </div>
   );
 };
+
+
 
 export default Contact;

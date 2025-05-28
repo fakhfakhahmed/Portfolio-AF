@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import Navbar from './Navbar';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Layout = ({ children }) => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 501);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 501);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -14,10 +26,20 @@ const Layout = ({ children }) => {
     return location.pathname === path ? 'text-rn-accent' : 'text-white hover:text-rn-accent';
   };
 
+  useEffect(() => {
+    document.body.style.backgroundColor = '#121212'; // Set body background to match rn-dark
+    return () => {
+      document.body.style.backgroundColor = '';
+    };
+  }, []);
+
   return (
-    <div className="flex h-screen bg-rn-dark">
-      {/* Sidebar */}
-      <div className="w-16 sm:w-20 md:w-24 bg-rn-darker flex flex-col fixed h-screen z-10">
+    <div className="flex min-h-screen bg-rn-dark">
+      {/* Mobile Navigation - Always rendered regardless of page */}
+      <Navbar />
+      {/* Sidebar - Hidden on Mobile */}
+      {!isMobile && (
+        <div className="w-16 sm:w-20 md:w-24 bg-rn-darker flex flex-col fixed h-screen z-10">
         {/* Logo */}
         <div className="p-3 sm:p-4 md:p-5">
           <Link to="/" className="text-rn-accent font-bold text-lg sm:text-xl">AF</Link>
@@ -73,25 +95,15 @@ const Layout = ({ children }) => {
           </Link>
         </div>
         
-        {/* Language Switcher */}
-        <div className="pb-6 flex flex-col items-center space-y-2">
-          <button 
-            onClick={() => changeLanguage('en')} 
-            className={`text-xs sm:text-sm ${i18n.language === 'en' ? 'text-rn-accent' : 'text-white hover:text-rn-accent'}`}
-          >
-            EN
-          </button>
-          <button 
-            onClick={() => changeLanguage('fr')} 
-            className={`text-xs sm:text-sm ${i18n.language === 'fr' ? 'text-rn-accent' : 'text-white hover:text-rn-accent'}`}
-          >
-            FR
-          </button>
+        {/* Creative Language Switcher - Desktop */}
+        <div className="pb-6 flex flex-col items-center justify-center mt-2">
+          <LanguageSwitcher isMobile={false} />
         </div>
       </div>
+      )}
       
       {/* Main Content */}
-      <div className="ml-16 sm:ml-20 md:ml-24 w-full bg-rn-dark text-white">
+      <div className={`${isMobile ? 'pb-16 w-full' : 'ml-16 sm:ml-20 md:ml-24 w-full'} bg-rn-dark text-white`}>
         {children}
       </div>
     </div>
