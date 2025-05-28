@@ -79,7 +79,8 @@ const Projects = () => {
       ],
       technologies: ['React.js', 'Tailwind CSS', 'i18next', 'React Router', 'Vite'],
       year: '2025',
-      link: 'https://github.com/fakhfakhahmed',
+      githubLink: 'https://github.com/fakhfakhahmed/Portfolio-AF',
+      projectLink: 'https://github.com/fakhfakhahmed/Portfolio-AF',
       media: [
         { type: 'image', src: portfolioGif },
         { type: 'image', src: portfolioImg1 },
@@ -110,7 +111,8 @@ const Projects = () => {
         'Google Maps API', 'Socket.io', 'Stripe', 'Docker'
       ],
       year: '2025',
-      link: 'https://github.com/fakhfakhahmed',
+      githubLink: 'https://github.com/fakhfakhahmed/Budarent',
+      projectLink: 'https://github.com/fakhfakhahmed/Budarent',
       media: [
         { type: 'image', src: budarentImg1 },
         { type: 'image', src: budarentImg2 },
@@ -141,7 +143,8 @@ const Projects = () => {
         'MySQL', 'MongoDB', 'RabbitMQ', 'Eureka', 'Grafana', 'Prometheus'
       ],
       year: '2024',
-      link: 'https://github.com/fakhfakhahmed',
+      githubLink: 'https://github.com/fakhfakhahmed/Raskelnii',
+      projectLink: 'https://github.com/fakhfakhahmed/Raskelnii',
       media: [
         { type: 'image', src: raskelniGif },
         { type: 'image', src: raskelniImg1 },
@@ -174,7 +177,8 @@ const Projects = () => {
         'JWT', 'Socket.io', 'Stripe', 'AWS S3'
       ],
       year: '2022',
-      link: 'https://github.com/fakhfakhahmed',
+      githubLink: 'https://github.com/fakhfakhahmed/ReactGamingwebSite',
+      projectLink: 'https://github.com/fakhfakhahmed/ReactGamingwebSite',
       media: [
         { type: 'image', src: gamezoneImg1 },
         { type: 'image', src: gamezoneImg2 },
@@ -205,7 +209,8 @@ const Projects = () => {
         'Redis', 'WebSockets', 'JWT', 'Docker'
       ],
       year: '2021',
-      link: 'https://github.com/fakhfakhahmed',
+      githubLink: 'https://github.com/fakhfakhahmed',
+      projectLink: 'https://github.com/fakhfakhahmed',
       media: [
         { type: 'image', src: boostraImg1 },
         { type: 'image', src: boostraImg2 },
@@ -242,7 +247,7 @@ const Projects = () => {
       {/* Additional Projects Section */}
       <section className="py-10 sm:py-16 md:py-20 bg-rn-gray">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 md:mb-12 uppercase tracking-tight">other works</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 md:mb-12 uppercase tracking-tight">{t('projects.otherProjects')}</h2>
           
           <ul className="space-y-4 sm:space-y-6 max-w-4xl">
             {t('projects.list', { returnObjects: true }).map((project, index) => (

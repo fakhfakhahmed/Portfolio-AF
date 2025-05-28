@@ -164,6 +164,9 @@
     "intro": "Voici certains de mes projets r\u00e9cents. Cliquez sur n'importe quel projet pour en savoir plus.",
     "viewProjects": "Voir les projets",
     "githubActivity": "Activité GitHub",
+    "contributions": "Contributions",
+    "contributionActivity": "Activité de contribution au cours de l'année dernière",
+    "recentActivity": "Activité Récente",
     "viewDetails": "Voir détails",
     "visitSite": "Visiter le site",
     "viewGithub": "Voir GitHub",
@@ -174,6 +177,7 @@
     "codeSnippet": "Extrait de code",
     "otherProjects": "Autres projets",
     "viewCode": "Voir le code",
+    "viewProject": "Voir le projet",
     "list": [
       "Projet DevOps CI/CD - Jenkins, Docker, SonarQube, Prometheus, Grafana - 2022",
       "Application Web RH - Angular, Spring Boot, MySQL - 2021",
@@ -282,6 +286,9 @@
       "challenges": "L'un des principaux défis était de mettre en place un système de gestion des stocks en temps réel capable de gérer les actions simultanées des utilisateurs sans survendre. La solution a impliqué la mise en œuvre de mises à jour optimistes de l'interface utilisateur avec validation côté serveur et un système de traitement des commandes basé sur une file d'attente."
     }
   },  
+  "common": {
+    "loading": "Chargement"
+  },
   "footer": {
     "tryNow": "Essayer maintenant !",
     "moreTemplates": "Plus de modèles",

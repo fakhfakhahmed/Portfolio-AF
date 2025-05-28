@@ -167,11 +167,14 @@ const ProjectDetailsPopup = ({ isOpen, onClose, project }) => {
             <div className="tech-stack">
               <h3>{t('projects.technologiesUsed')}</h3>
               <div className="tech-tags">
-                {project.technologies.map((tech, index) => (
-                  <span key={index} className="tech-tag">
-                    {tech}
-                  </span>
-                ))}
+                {Array.isArray(project.technologies) 
+                  ? project.technologies.map((tech, index) => (
+                      <span key={index} className="tech-tag">
+                        {tech}
+                      </span>
+                    ))
+                  : null
+                }
               </div>
             </div>
             
@@ -179,9 +182,12 @@ const ProjectDetailsPopup = ({ isOpen, onClose, project }) => {
               <div className="features">
                 <h3>{t('projects.projectFeatures')}</h3>
                 <ul>
-                  {project.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
+                  {Array.isArray(project.features) 
+                    ? project.features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                      ))
+                    : (<li>{typeof project.features === 'string' ? project.features : ''}</li>)
+                  }
                 </ul>
               </div>
             )}
@@ -193,18 +199,18 @@ const ProjectDetailsPopup = ({ isOpen, onClose, project }) => {
               </div>
             )}
             
-            {project.link && (
+            <div className="project-links">
               <div className="project-link">
                 <a 
-                  href={project.link} 
+                  href={project.githubLink || 'https://github.com/fakhfakhahmed'} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="view-project-link"
+                  className="view-code-link"
                 >
                   {t('projects.viewCode')}
                 </a>
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>

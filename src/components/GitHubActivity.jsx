@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const GitHubActivity = ({ username }) => {
+  const { t } = useTranslation();
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -50,7 +52,7 @@ const GitHubActivity = ({ username }) => {
     }
   };
 
-  if (loading) return <div className="text-center py-6 text-gray-400">Loading GitHub activity...</div>;
+  if (loading) return <div className="text-center py-6 text-gray-400">{t('common.loading')}...</div>;
   if (error) return <div className="text-center py-6 text-red-500">{error}</div>;
   if (!events.length) return null;
 
@@ -60,7 +62,7 @@ const GitHubActivity = ({ username }) => {
         <div className="flex flex-col md:flex-row gap-12">
           {/* GitHub Contributions Graph */}
           <div className="md:w-1/2">
-            <h3 className="text-2xl font-semibold mb-6">Contributions</h3>
+            <h3 className="text-2xl font-semibold mb-6">{t('projects.contributions')}</h3>
             <div className="bg-gray-800 bg-opacity-30 p-4 rounded-lg">
               <img 
                 src={`https://ghchart.rshah.org/${username}`} 
@@ -68,14 +70,14 @@ const GitHubActivity = ({ username }) => {
                 className="w-full h-auto rounded"
               />
               <div className="mt-3 text-center text-sm text-gray-400">
-                Contribution activity over the past year
+                {t('projects.contributionActivity')}
               </div>
             </div>
           </div>
 
           {/* Recent Activity */}
           <div className="md:w-1/2">
-            <h3 className="text-2xl font-semibold mb-6">Recent Activity</h3>
+            <h3 className="text-2xl font-semibold mb-6">{t('projects.recentActivity')}</h3>
             <div className="space-y-4">
               {events.slice(0, 6).map((event, index) => (
                 <div key={index} className="flex p-4 bg-gray-800 bg-opacity-30 rounded-lg hover:bg-gray-700 transition-colors">

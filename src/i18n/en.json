@@ -164,6 +164,9 @@
     "intro": "Here are some of my recent projects. Click on any project to learn more.",
     "viewProjects": "View Projects",
     "githubActivity": "GitHub Activity",
+    "contributions": "Contributions",
+    "contributionActivity": "Contribution activity over the past year",
+    "recentActivity": "Recent Activity",
     "viewDetails": "View Details",
     "visitSite": "Visit Site",
     "viewGithub": "View GitHub",
@@ -174,6 +177,7 @@
     "codeSnippet": "Code Snippet",
     "otherProjects": "Other Projects",
     "viewCode": "View Code",
+    "viewProject": "View Project",
     "list": [
       "DevOps CI/CD Project - Jenkins, Docker, SonarQube, Prometheus, Grafana - 2022",
       "HR Web App - Angular, Spring Boot, MySQL - 2021",
@@ -235,16 +239,55 @@
     },
     "raskelni": {
       "title": "Raskelni",
-      "description": "A logistics platform connecting users with delivery personnel in real-time."
+      "description": "Built a recycling app with mobile (Flutter) and web (React.js) interfaces, promoting environmental sustainability through a reward-based system in Tunisia.",
+      "detailedDescription": "Raskelni is a recycling platform developed to encourage eco-friendly behavior by allowing users to sell and buy recyclable items such as bottles and cartons. The application integrates a reward system that incentivizes users for every delivery. Designed with a scalable microservices architecture using Spring Boot, the system ensures efficient communication and maintainability. CI/CD pipelines automate the delivery process using Jenkins and Docker, while REST APIs were optimized to reduce response times by 30%.",
+      "features": [
+        "Mobile app built using Flutter",
+        "Web application developed with React.js",
+        "Microservices architecture with Spring Boot",
+        "Reward system for users recycling bottles and cartons",
+        "Integrated CI/CD pipelines using Jenkins and Docker",
+        "Optimized REST APIs for performance and scalability",
+        "Secure user authentication and role-based access",
+        "Location-based delivery tracking system"
+      ],
+      "challenges": "A key challenge was maintaining consistent performance across both mobile and web platforms while handling user rewards and logistics. To address this, services were modularized, APIs were optimized, and CI/CD automation was introduced to streamline testing and deployments."
     },
     "boostra": {
       "title": "Boostra",
-      "description": "Educational social platform with quizzes and learning resources."
+      "description": "Developed a collaborative workplace platform that facilitates communication, project coordination, and employee engagement within companies.",
+      "detailedDescription": "Boostra is a comprehensive collaboration platform designed to enhance workplace connectivity and streamline operations within organizations. The application focuses on facilitating teamwork, knowledge sharing, and efficient communication between employees and departments. It provides features for project collaboration, document sharing, real-time messaging, and company-wide announcements. Built with Angular on the frontend for a responsive user experience and Spring Boot backend for secure data processing, Boostra helps companies create a more connected and productive work environment.",
+      "features": [
+        "Comprehensive employee management system",
+        "Performance tracking and evaluation tools",
+        "Scheduling and time management",
+        "Company-wide communication platform",
+        "Department-specific coordination tools",
+        "Advanced workforce analytics and reporting",
+        "Document management and sharing",
+        "Customizable workflow automation"
+      ],
+      "challenges": "The main challenge was creating a secure yet flexible system that could adapt to different organizational structures while maintaining data privacy. We implemented role-based access controls and designed a modular architecture that allows customization without compromising the core functionality."
     },
     "gamezone": {
       "title": "GameZone",
-      "description": "E-commerce platform for gaming products with blog and event features."
+      "description": "Developed a gaming e-commerce platform allowing users to browse, purchase, and review video games using React.js, Node.js, and MongoDB.",
+      "detailedDescription": "GameZone is a full-stack e-commerce platform tailored for the gaming community. The application allows users to create accounts, explore a wide range of video games, make purchases, and leave reviews. It includes features such as a shopping cart, secure payment gateway integration, admin dashboard for managing products and orders, and real-time stock management. The frontend was built with React.js, providing a responsive and dynamic user experience, while the backend used Node.js with Express and MongoDB for flexible, scalable data storage.",
+      "features": [
+        "Interactive and responsive UI built with React.js",
+        "RESTful APIs using Node.js and Express",
+        "Product catalog with categories, search, and filtering",
+        "Secure user authentication and authorization",
+        "Shopping cart and checkout system with payment integration",
+        "Admin dashboard for managing inventory and orders",
+        "User reviews and ratings for games",
+        "Real-time inventory and order tracking"
+      ],
+      "challenges": "One of the main challenges was implementing a real-time inventory management system that could handle concurrent user actions without overselling. The solution involved implementing optimistic UI updates with server-side validation and a queue-based transaction system for processing orders."
     }
+  },
+  "common": {
+    "loading": "Loading"
   },
   "footer": {
     "tryNow": "Try Now!",

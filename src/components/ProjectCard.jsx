@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect, memo } from 'react';
 import { throttle, lazyLoadVideo } from '../utils/lazyLoading';
+import { useTranslation } from 'react-i18next';
 
 const ProjectCard = ({ project, onViewDetails }) => {
+  const { t } = useTranslation();
   if (project.isOther) {
     return (
       <div className="flex flex-col justify-between h-full p-10 bg-gray-900 bg-opacity-80 rounded-2xl shadow-xl text-center">
@@ -10,16 +12,18 @@ const ProjectCard = ({ project, onViewDetails }) => {
         </div>
         <div className="flex justify-center space-x-4 mt-8">
           <a
-            href="#"
+            href={project.githubLink || 'https://github.com/fakhfakhahmed'}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block text-sm uppercase tracking-wider font-medium hover:text-gray-600 transition-colors"
           >
-            View Project
+            {t('projects.viewProject')}
           </a>
           <button
             onClick={() => onViewDetails(project)}
             className="inline-block text-sm uppercase tracking-wider font-medium hover:text-gray-600 transition-colors"
           >
-            View Details
+            {t('projects.viewDetails')}
           </button>
         </div>
       </div>
@@ -181,18 +185,18 @@ const ProjectCard = ({ project, onViewDetails }) => {
       </div>
       <div className="absolute bottom-0 left-0 right-0 pb-4 sm:pb-6 md:pb-4 flex justify-center space-x-4 sm:space-x-10">
         <a 
-          href={project.link || "#"} 
-          target={project.link ? "_blank" : ""}
-          rel={project.link ? "noopener noreferrer" : ""}
+          href={project.githubLink || 'https://github.com/fakhfakhahmed'} 
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block text-xs sm:text-sm uppercase tracking-wider font-medium hover:text-red-500 transition-colors"
         >
-          View Project
+          {t('projects.viewProject')}
         </a>
         <button 
           onClick={() => onViewDetails(project)}
           className="inline-block text-xs sm:text-sm uppercase tracking-wider font-medium hover:text-red-500 transition-colors border-b border-transparent hover:border-red-500 pb-1"
         >
-          View Details
+          {t('projects.viewDetails')}
         </button>
       </div>
     </div>
