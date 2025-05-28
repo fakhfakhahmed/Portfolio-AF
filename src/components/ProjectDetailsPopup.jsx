@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef, memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import '../assets/styles/project-details-popup.css';
 import { lazyLoadVideo } from '../utils/lazyLoading';
 
 const ProjectDetailsPopup = ({ isOpen, onClose, project }) => {
+  const { t } = useTranslation();
   const popupRef = useRef(null);
   const videoRef = useRef(null);
   const [activeMediaIndex, setActiveMediaIndex] = useState(0);
@@ -163,7 +165,7 @@ const ProjectDetailsPopup = ({ isOpen, onClose, project }) => {
             )}
             
             <div className="tech-stack">
-              <h3>Technologies Used</h3>
+              <h3>{t('projects.technologiesUsed')}</h3>
               <div className="tech-tags">
                 {project.technologies.map((tech, index) => (
                   <span key={index} className="tech-tag">
@@ -175,7 +177,7 @@ const ProjectDetailsPopup = ({ isOpen, onClose, project }) => {
             
             {project.features && (
               <div className="features">
-                <h3>Key Features</h3>
+                <h3>{t('projects.projectFeatures')}</h3>
                 <ul>
                   {project.features.map((feature, index) => (
                     <li key={index}>{feature}</li>
@@ -186,7 +188,7 @@ const ProjectDetailsPopup = ({ isOpen, onClose, project }) => {
             
             {project.challenges && (
               <div className="challenges">
-                <h3>Challenges & Solutions</h3>
+                <h3>{t('projects.challenges')}</h3>
                 <p>{project.challenges}</p>
               </div>
             )}
@@ -199,7 +201,7 @@ const ProjectDetailsPopup = ({ isOpen, onClose, project }) => {
                   rel="noopener noreferrer"
                   className="view-project-link"
                 >
-                  View Project Repository
+                  {t('projects.viewCode')}
                 </a>
               </div>
             )}

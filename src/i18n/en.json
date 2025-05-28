@@ -78,43 +78,219 @@
   },
   "experience": {
     "title": "Professional Experience",
-    "tactic": {
-      "role": "Full-Stack Developer \u2013 Final Year Internship",
-      "company": "TAC-TIC (02/2023 \u2013 08/2023)",
+    "pageTitle": "PROFESSIONAL EXPERIENCE",
+    "intro": "Throughout my career, I've had the opportunity to work on diverse projects that have enhanced my technical skills and problem-solving abilities. Here's a glimpse of my professional journey.",
+    "freelance": {
+      "dates": "01/2024 - Present",
+      "location": "Remote",
+      "role": "Freelance Full-Stack Developer",
+      "company": "Self-Employed",
       "details": [
-        "Built a mobile app using Flutter and a web app with React.js.",
-        "Designed and implemented a scalable microservices architecture with Spring Boot.",
-        "Integrated CI/CD pipelines using Jenkins and Docker.",
-        "Optimized REST APIs, reducing response times by 30%."
+        "Delivering web and mobile solutions for international clients as a freelance developer",
+        "Building apps with React.js, Node.js, MongoDB, and modern frameworks",
+        "Managing full project lifecycle: requirements, design, development, deployment, and client support"
+      ]
+    },
+    "tactic": {
+      "dates": "02/2023 - 08/2023",
+      "location": "Tunisia",
+      "role": "Full-Stack Developer – Final Year Internship",
+      "company": "TAC-TIC",
+      "details": [
+        "Built a mobile app using Flutter and a web app with React.js",
+        "Designed and implemented a scalable microservices architecture with Spring Boot",
+        "Integrated CI/CD pipelines using Jenkins and Docker",
+        "Optimized REST APIs, reducing response times by 30%"
       ]
     },
     "beecoders": {
-      "role": "Full-Stack Developer \u2013 Engineering Internship",
-      "company": "Beecoders (06/2022 \u2013 08/2022)",
+      "dates": "06/2022 - 08/2022",
+      "location": "Tunisia",
+      "role": "Full-Stack Developer – Engineering Internship",
+      "company": "Beecoders",
       "details": [
-        "Developed a gaming e-commerce platform using React.js, Node.js, and MongoDB."
+        "Developed a gaming e-commerce platform using React.js, Node.js, and MongoDB"
       ]
     },
     "sisagri": {
-      "role": "Web Developer \u2013 Technician Internship",
-      "company": "Sisagri (06/2021 \u2013 08/2021)",
+      "dates": "06/2021 - 08/2021",
+      "location": "Tunisia",
+      "role": "Web Developer – Technician Internship",
+      "company": "Sisagri",
       "details": [
-        "Created an e-commerce website for agricultural equipment sales and rentals."
+        "Created an e-commerce website for agricultural equipment sales and rentals"
       ]
+    },
+    "skillsSection": {
+      "title": "Skill Highlights",
+      "technical": {
+        "title": "Technical Skills",
+        "skills": [
+          "Full-stack development expertise",
+          "Microservices architecture",
+          "CI/CD pipeline implementation",
+          "Mobile app development"
+        ]
+      },
+      "soft": {
+        "title": "Soft Skills",
+        "skills": [
+          "Project management",
+          "Team collaboration",
+          "Client communication",
+          "Problem-solving"
+        ]
+      },
+      "business": {
+        "title": "Business Insights",
+        "skills": [
+          "Performance optimization",
+          "Cost reduction strategies",
+          "User experience enhancement",
+          "Scalable solutions design"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Interested in my work?",
+      "text": "Check out my portfolio of projects or get in touch to discuss potential collaborations.",
+      "viewProjects": "View Projects",
+      "contactMe": "Contact Me"
     }
   },
   "projects": {
-    "title": "Key Projects",
+    "title": "Projects",
+    "pageTitle": "MY PROJECTS",
+    "intro": "Here are some of my recent projects. Click on any project to learn more.",
+    "viewProjects": "View Projects",
+    "githubActivity": "GitHub Activity",
+    "viewDetails": "View Details",
+    "visitSite": "Visit Site",
+    "viewGithub": "View GitHub",
+    "backToProjects": "Back to Projects",
+    "technologiesUsed": "Technologies Used",
+    "projectFeatures": "Project Features",
+    "projectChallenges": "Challenges & Solutions",
+    "codeSnippet": "Code Snippet",
+    "otherProjects": "Other Projects",
+    "viewCode": "View Code",
     "list": [
-      "DevOps CI/CD Project \u2013 Jenkins, Docker, SonarQube, Prometheus, Grafana (2022)",
-      "HR Web App \u2013 Angular, Spring Boot, MySQL (2021)",
-      "Multi-Platform Artist App \u2013 Symfony, JavaFX, CodeNameOne (2020)"
-    ]
+      "DevOps CI/CD Project - Jenkins, Docker, SonarQube, Prometheus, Grafana - 2022",
+      "HR Web App - Angular, Spring Boot, MySQL - 2021",
+      "Multi-Platform Artist App - Symfony, JavaFX, CodeNameOne - 2020"
+    ],
+    "portfolio": {
+      "title": "Portfolio Website",
+      "description": "A bilingual responsive portfolio website built with React, Tailwind CSS, and i18next for internationalization.",
+      "detailedDescription": "This portfolio website showcases my work and skills as a full-stack developer. The site is built with React and uses Tailwind CSS for styling. It features a bilingual interface (English and French) using i18next for internationalization, ensuring content is accessible to a wider audience.",
+      "features": [
+        "Responsive design that works on all devices",
+        "Bilingual support with language switching",
+        "Interactive project showcase with media galleries",
+        "Animated page transitions",
+        "Optimized performance with lazy loading",
+        "Contact form with validation"
+      ],
+      "challenges": [
+        "Creating a seamless bilingual experience while maintaining an elegant UI was a key challenge. I implemented a context-based translation system and designed the UI to gracefully handle text length differences between languages."
+      ],
+      "fullDescription": "A comprehensive bilingual portfolio website built with React and Tailwind CSS. Features include responsive design, dark theme, multi-language support, and a contact form. The site showcases my projects, skills, and professional experience."
+    },
+    "budarent": {
+      "title": "Budarent",
+      "description": "Developed a car rental web application with Angular, Node.js, and MongoDB featuring Google Maps integration, booking system, and admin dashboard.",
+      "detailedDescription": "Budarent is a comprehensive car rental platform built in collaboration with Abdelmoementrabelsi. The application allows users to browse available vehicles, make reservations, and manage their bookings. It features an interactive map interface using Google Maps API for location-based vehicle selection, a secure authentication system with JWT, and a robust booking management system. The admin dashboard provides complete control over the rental fleet, user accounts, and reservation data.",
+      "features": [
+        "Interactive vehicle browsing with detailed specifications",
+        "Location-based car rental using Google Maps integration",
+        "Secure user authentication and authorization with JWT",
+        "Complete booking management system",
+        "Admin dashboard for fleet and reservation management",
+        "User reviews and ratings for vehicles",
+        "Multi-language support for international users"
+      ],
+      "challenges": [
+        "A significant challenge was implementing the real-time availability system that needed to account for bookings, maintenance schedules, and vehicle locations. We developed a custom algorithm to optimize vehicle assignment based on proximity and availability, reducing customer wait times by 25%."
+      ],
+      "fullDescription": "Budarent is a comprehensive car rental platform developed with the MEAN stack. It features user authentication, an intuitive car browsing interface with filtering options, a secure booking system, an admin dashboard for fleet management, and location tracking using Google Maps API. The application handles complex booking validation logic and provides real-time updates on car availability."
+    },
+    "ecommerce": {
+      "title": "E-Commerce Platform",
+      "description": "A full-featured e-commerce application with product management, cart functionality, and payment processing.",
+      "detailedDescription": "A comprehensive e-commerce platform built with the MERN stack. The application offers a complete shopping experience, from browsing products to secure checkout. Features include user account management, product search with filters, shopping cart, wishlist, secure payment processing, and order tracking.",
+      "features": [
+        "User authentication and profile management",
+        "Product catalog with search and filters",
+        "Shopping cart and wishlist functionality",
+        "Secure payment processing with Stripe",
+        "Order tracking and history",
+        "Product reviews and ratings",
+        "Admin dashboard for inventory management"
+      ],
+      "challenges": [
+        "State management for cart items across sessions was challenging. I implemented a solution using Redux for state management combined with local storage persistance to maintain cart contents even when users close the browser.",
+        "Handling payment security and ensuring secure transactions was another challenge. I integrated Stripe's secure payment gateway with proper validation and error handling."
+      ],
+      "fullDescription": "A comprehensive e-commerce platform built with the MERN stack (MongoDB, Express, React, Node.js). Features include user authentication, extensive product catalog with search and filter capabilities, shopping cart functionality, secure payment processing with Stripe, and order tracking. The application uses Redux for state management and implements performance optimizations for handling large product listings."
+    },
+    "raskelni": {
+      "title": "Raskelni",
+      "description": "A logistics platform connecting users with delivery personnel in real-time."
+    },
+    "boostra": {
+      "title": "Boostra",
+      "description": "Educational social platform with quizzes and learning resources."
+    },
+    "gamezone": {
+      "title": "GameZone",
+      "description": "E-commerce platform for gaming products with blog and event features."
+    }
+  },
+  "footer": {
+    "tryNow": "Try Now!",
+    "moreTemplates": "More Templates",
+    "allRightsReserved": "All rights reserved.",
+    "socialLinks": {
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "dribbble": "Dribbble",
+      "behance": "Behance"
+    }
   },
   "contact": {
     "title": "Contact Me",
     "email": "fakhfakh.ahmeed@gmail.com",
     "phone": "+216 28 820 474",
-    "linkedin": "linkedin.com/in/ahmed-fakhfakh"
+    "linkedin": "linkedin.com/in/ahmed-fakhfakh",
+    "pageTitle": "CONTACT ME",
+    "intro": "Interested in working together? Feel free to get in touch using the contact form below or through any of my social media channels.",
+    "sendMessage": "Send a Message",
+    "formLabels": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "required": "Required"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "email": "Your email address",
+      "subject": "Subject of your message",
+      "message": "Your message"
+    },
+    "submitButton": "Send Message",
+    "submitting": "Sending...",
+    "formMessages": {
+      "success": "Thank you! Your message has been sent successfully.",
+      "error": "Please fill in all required fields."
+    },
+    "contactInfo": "Contact Information",
+    "connect": "Connect",
+    "availability": "Availability",
+    "availabilityText": "I'm currently available for freelance work and open to discussing new opportunities.",
+    "hireMe": "Hire Me",
+    "downloadCV": "Download CV",
+    "downloading": "Downloading..."
   }
 }

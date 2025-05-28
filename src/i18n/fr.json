@@ -78,43 +78,255 @@
   },
   "experience": {
     "title": "Exp\u00e9riences Professionnelles",
-    "tactic": {
-      "role": "D\u00e9veloppeur Full-Stack \u2013 Stage de fin d\u2019\u00e9tudes",
-      "company": "TAC-TIC (02/2023 \u2013 08/2023)",
+    "pageTitle": "EXP\u00c9RIENCES PROFESSIONNELLES",
+    "intro": "Au cours de ma carri\u00e8re, j'ai eu l'opportunit\u00e9 de travailler sur divers projets qui ont renforc\u00e9 mes comp\u00e9tences techniques et mes capacit\u00e9s de r\u00e9solution de probl\u00e8mes. Voici un aper\u00e7u de mon parcours professionnel.",
+    "freelance": {
+      "dates": "01/2024 - Pr\u00e9sent",
+      "location": "\u00c0 distance",
+      "role": "D\u00e9veloppeur Full-Stack Freelance",
+      "company": "Auto-entrepreneur",
       "details": [
-        "D\u00e9veloppement d\u2019une application mobile (Flutter) et web (React.js).",
-        "Mise en place d\u2019une architecture microservices avec Spring Boot.",
-        "Int\u00e9gration CI/CD via Jenkins et Docker.",
-        "Optimisation des API REST (r\u00e9duction de 30 % du temps de r\u00e9ponse)."
+        "Fourniture de solutions web et mobiles pour des clients internationaux en tant que d\u00e9veloppeur ind\u00e9pendant",
+        "D\u00e9veloppement d'applications avec React.js, Node.js, MongoDB et des frameworks modernes",
+        "Gestion du cycle de vie complet des projets : exigences, conception, d\u00e9veloppement, d\u00e9ploiement et support client"
+      ]
+    },
+    "tactic": {
+      "dates": "02/2023 - 08/2023",
+      "location": "Tunisie",
+      "role": "D\u00e9veloppeur Full-Stack \u2013 Stage de fin d'\u00e9tudes",
+      "company": "TAC-TIC",
+      "details": [
+        "D\u00e9veloppement d'une application mobile (Flutter) et web (React.js)",
+        "Mise en place d'une architecture microservices avec Spring Boot",
+        "Int\u00e9gration CI/CD via Jenkins et Docker",
+        "Optimisation des API REST (r\u00e9duction de 30% du temps de r\u00e9ponse)"
       ]
     },
     "beecoders": {
+      "dates": "06/2022 - 08/2022",
+      "location": "Tunisie",
       "role": "D\u00e9veloppeur Full-Stack \u2013 Stage Ing\u00e9nieur",
-      "company": "Beecoders (06/2022 \u2013 08/2022)",
+      "company": "Beecoders",
       "details": [
-        "Conception d\u2019un site e-commerce gaming (React.js, Node.js, MongoDB)."
+        "Conception d'un site e-commerce gaming (React.js, Node.js, MongoDB)"
       ]
     },
     "sisagri": {
+      "dates": "06/2021 - 08/2021",
+      "location": "Tunisie",
       "role": "D\u00e9veloppeur Web \u2013 Stage Technicien",
-      "company": "Sisagri (06/2021 \u2013 08/2021)",
+      "company": "Sisagri",
       "details": [
-        "R\u00e9alisation d\u2019un site e-commerce pour la vente/location de mat\u00e9riel agricole."
+        "R\u00e9alisation d'un site e-commerce pour la vente/location de mat\u00e9riel agricole"
       ]
+    },
+    "skillsSection": {
+      "title": "Comp\u00e9tences Cl\u00e9s",
+      "technical": {
+        "title": "Comp\u00e9tences Techniques",
+        "skills": [
+          "Expertise en d\u00e9veloppement full-stack",
+          "Architecture microservices",
+          "Mise en \u0153uvre de pipelines CI/CD",
+          "D\u00e9veloppement d'applications mobiles"
+        ]
+      },
+      "soft": {
+        "title": "Comp\u00e9tences Relationnelles",
+        "skills": [
+          "Gestion de projet",
+          "Collaboration en \u00e9quipe",
+          "Communication client",
+          "R\u00e9solution de probl\u00e8mes"
+        ]
+      },
+      "business": {
+        "title": "Perspectives Commerciales",
+        "skills": [
+          "Optimisation des performances",
+          "Strat\u00e9gies de r\u00e9duction des co\u00fbts",
+          "Am\u00e9lioration de l'exp\u00e9rience utilisateur",
+          "Conception de solutions \u00e9volutives"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Int\u00e9ress\u00e9 par mon travail ?",
+      "text": "Consultez mon portfolio de projets ou contactez-moi pour discuter de potentielles collaborations.",
+      "viewProjects": "Voir les Projets",
+      "contactMe": "Me Contacter"
     }
   },
   "projects": {
-    "title": "Projets Personnels",
+    "title": "Projets",
+    "pageTitle": "MES PROJETS",
+    "intro": "Voici certains de mes projets r\u00e9cents. Cliquez sur n'importe quel projet pour en savoir plus.",
+    "viewProjects": "Voir les projets",
+    "githubActivity": "Activité GitHub",
+    "viewDetails": "Voir détails",
+    "visitSite": "Visiter le site",
+    "viewGithub": "Voir GitHub",
+    "backToProjects": "Retour aux projets",
+    "technologiesUsed": "Technologies utilisées",
+    "projectFeatures": "Fonctionnalités",
+    "projectChallenges": "Défis et Solutions",
+    "codeSnippet": "Extrait de code",
+    "otherProjects": "Autres projets",
+    "viewCode": "Voir le code",
     "list": [
-      "Projet DevOps CI/CD \u2013 Jenkins, Docker, SonarQube, Prometheus, Grafana (2022)",
-      "Application Web RH \u2013 Angular, Spring Boot, MySQL (2021)",
-      "Application Multiplateforme Artistes \u2013 Symfony, JavaFX, CodeNameOne (2020)"
-    ]
+      "Projet DevOps CI/CD - Jenkins, Docker, SonarQube, Prometheus, Grafana - 2022",
+      "Application Web RH - Angular, Spring Boot, MySQL - 2021",
+      "Application Multi-Plateforme pour Artistes - Symfony, JavaFX, CodeNameOne - 2020"
+    ],
+    "portfolio": {
+      "title": "Site Portfolio",
+      "description": "Un site portfolio bilingue et responsive construit avec React, Tailwind CSS et i18next pour l'internationalisation.",
+      "detailedDescription": "Ce site portfolio présente mon travail et mes compétences en tant que développeur full-stack. Le site est construit avec React et utilise Tailwind CSS pour le style. Il propose une interface bilingue (anglais et français) utilisant i18next pour l'internationalisation, garantissant que le contenu est accessible à un public plus large.",
+      "features": [
+        "Design responsive qui fonctionne sur tous les appareils",
+        "Support bilingue avec changement de langue",
+        "Présentation interactive des projets avec galeries multimédias",
+        "Transitions de page animées",
+        "Performance optimisée avec chargement différé",
+        "Formulaire de contact avec validation"
+      ],
+      "challenges": [
+        "Créer une expérience bilingue fluide tout en maintenant une interface utilisateur élégante était un défi majeur. J'ai implémenté un système de traduction basé sur le contexte et conçu l'interface utilisateur pour gérer avec élégance les différences de longueur de texte entre les langues."
+      ],
+      "fullDescription": "Un site portfolio bilingue complet construit avec React et Tailwind CSS. Les fonctionnalités incluent un design responsive, un thème sombre, un support multilingue et un formulaire de contact. Le site présente mes projets, compétences et expérience professionnelle."
+    },
+    "budarent": {
+      "title": "Budarent",
+      "description": "Développement d'une application web de location de voitures avec Angular, Node.js et MongoDB intégrant Google Maps, un système de réservation et un tableau de bord administrateur.",
+      "detailedDescription": "Budarent est une plateforme complète de location de voitures développée en collaboration avec Abdelmoementrabelsi. L'application permet aux utilisateurs de parcourir les véhicules disponibles, de faire des réservations et de gérer leurs réservations. Elle propose une interface cartographique interactive utilisant l'API Google Maps pour la sélection de véhicules basée sur la localisation, un système d'authentification sécurisé avec JWT et un système robuste de gestion des réservations. Le tableau de bord administrateur offre un contrôle complet sur la flotte de location, les comptes utilisateurs et les données de réservation.",
+      "features": [
+        "Navigation interactive des véhicules avec spécifications détaillées",
+        "Location de voitures basée sur la localisation utilisant l'intégration Google Maps",
+        "Authentification et autorisation sécurisées des utilisateurs avec JWT",
+        "Système complet de gestion des réservations",
+        "Tableau de bord administrateur pour la gestion de la flotte et des réservations",
+        "Avis et évaluations des utilisateurs pour les véhicules",
+        "Support multilingue pour les utilisateurs internationaux"
+      ],
+      "challenges": [
+        "Un défi important était la mise en œuvre du système de disponibilité en temps réel qui devait tenir compte des réservations, des programmes de maintenance et des emplacements des véhicules. Nous avons développé un algorithme personnalisé pour optimiser l'attribution des véhicules en fonction de la proximité et de la disponibilité, réduisant les temps d'attente des clients de 25 %."
+      ],
+      "fullDescription": "Budarent est une plateforme complète de location de voitures développée avec le stack MEAN. Elle propose l'authentification des utilisateurs, une interface intuitive de navigation des voitures avec options de filtrage, un système de réservation sécurisé, un tableau de bord administrateur pour la gestion de la flotte et le suivi de localisation utilisant l'API Google Maps. L'application gère une logique complexe de validation des réservations et fournit des mises à jour en temps réel sur la disponibilité des voitures."
+    },
+    "ecommerce": {
+      "title": "Plateforme E-Commerce",
+      "description": "Une application e-commerce complète avec gestion des produits, fonctionnalité de panier et traitement des paiements.",
+      "detailedDescription": "Une plateforme e-commerce complète construite avec le stack MERN. L'application offre une expérience d'achat complète, de la navigation des produits au paiement sécurisé. Les fonctionnalités incluent la gestion des comptes utilisateurs, la recherche de produits avec filtres, le panier d'achat, la liste de souhaits, le traitement sécurisé des paiements et le suivi des commandes.",
+      "features": [
+        "Authentification et gestion de profil utilisateur",
+        "Catalogue de produits avec recherche et filtres",
+        "Fonctionnalités de panier d'achat et de liste de souhaits",
+        "Traitement sécurisé des paiements avec Stripe",
+        "Suivi et historique des commandes",
+        "Avis et évaluations des produits",
+        "Tableau de bord administrateur pour la gestion des stocks"
+      ],
+      "challenges": [
+        "La gestion d'état pour les articles du panier entre les sessions était un défi. J'ai implémenté une solution utilisant Redux pour la gestion d'état combinée à la persistance du stockage local pour maintenir le contenu du panier même lorsque les utilisateurs ferment le navigateur.",
+        "Gérer la sécurité des paiements et garantir des transactions sécurisées était un autre défi. J'ai intégré la passerelle de paiement sécurisée de Stripe avec une validation appropriée et une gestion des erreurs."
+      ],
+      "fullDescription": "Une plateforme e-commerce complète construite avec le stack MERN (MongoDB, Express, React, Node.js). Les fonctionnalités incluent l'authentification des utilisateurs, un catalogue de produits étendu avec capacités de recherche et de filtrage, fonctionnalité de panier d'achat, traitement sécurisé des paiements avec Stripe et suivi des commandes. L'application utilise Redux pour la gestion d'état et implémente des optimisations de performance pour gérer de grandes listes de produits."
+    },
+    "raskelni": {
+      "title": "Raskelni",
+      "description": "Une plateforme logistique connectant les utilisateurs avec le personnel de livraison en temps réel.",
+      "detailedDescription": "Raskelni est une plateforme de recyclage développée pour encourager un comportement écologique en permettant aux utilisateurs de vendre et d'acheter des articles recyclables tels que des bouteilles et des cartons. L'application intègre un système de récompense qui incite les utilisateurs pour chaque livraison. Conçu avec une architecture de microservices évolutive utilisant Spring Boot, le système assure une communication et une maintenabilité efficaces. Les pipelines CI/CD automatisent le processus de livraison en utilisant Jenkins et Docker, tandis que les API REST ont été optimisées pour réduire les temps de réponse de 30 %.",
+      "features": [
+        "Application mobile construite avec Flutter",
+        "Application web développée avec React.js",
+        "Architecture microservices avec Spring Boot",
+        "Système de récompense pour les utilisateurs recyclant des bouteilles et cartons",
+        "Intégration de pipelines CI/CD utilisant Jenkins et Docker",
+        "API REST optimisées pour la performance et l'évolutivité",
+        "Authentification sécurisée des utilisateurs et accès basé sur les rôles",
+        "Système de suivi de livraison basé sur la localisation"
+      ],
+      "challenges": "Un défi majeur était de maintenir des performances constantes sur les plateformes mobiles et web tout en gérant les récompenses des utilisateurs et la logistique. Pour résoudre ce problème, les services ont été modulariser, les API ont été optimisées, et l'automatisation CI/CD a été mise en place pour simplifier les tests et les déploiements."
+    },
+    "boostra": {
+      "title": "Boostra",
+      "description": "Plateforme sociale éducative avec des quiz et des ressources d'apprentissage.",
+      "detailedDescription": "Boostra est une plateforme de collaboration complète conçue pour améliorer la connectivité au travail et rationaliser les opérations au sein des organisations. L'application se concentre sur la facilitation du travail d'équipe, le partage des connaissances et une communication efficace entre les employés et les départements. Elle fournit des fonctionnalités de collaboration de projet, de partage de documents, de messagerie en temps réel et d'annonces à l'échelle de l'entreprise. Conçu avec Angular sur le frontend pour une expérience utilisateur réactive et un backend Spring Boot pour un traitement sécurisé des données, Boostra aide les entreprises à créer un environnement de travail plus connecté et productif.",
+      "features": [
+        "Système complet de gestion des employés",
+        "Outils de suivi et d'évaluation des performances",
+        "Planification et gestion du temps",
+        "Plateforme de communication à l'échelle de l'entreprise",
+        "Outils de coordination spécifiques aux départements",
+        "Analyses et rapports avancés sur la main-d'œuvre",
+        "Gestion et partage de documents",
+        "Automatisation des flux de travail personnalisables"
+      ],
+      "challenges": "Le principal défi consistait à créer un système sécurisé mais flexible pouvant s'adapter à différentes structures organisationnelles tout en maintenant la confidentialité des données. Nous avons mis en œuvre des contrôles d'accès basés sur les rôles et conçu une architecture modulaire permettant la personnalisation sans compromettre les fonctionnalités de base."
+    },
+    "gamezone": {
+      "title": "GameZone",
+      "description": "Plateforme e-commerce pour produits de jeu avec fonctionnalités de blog et d'événements.",
+      "detailedDescription": "GameZone est une plateforme e-commerce full-stack conçue pour la communauté des joueurs. L'application permet aux utilisateurs de créer des comptes, d'explorer une large gamme de jeux vidéo, d'effectuer des achats et de laisser des avis. Elle comprend des fonctionnalités telles qu'un panier d'achat, l'intégration d'une passerelle de paiement sécurisée, un tableau de bord administrateur pour gérer les produits et les commandes, et une gestion des stocks en temps réel. Le frontend a été construit avec React.js, offrant une expérience utilisateur réactive et dynamique, tandis que le backend utilisait Node.js avec Express et MongoDB pour un stockage de données flexible et évolutif.",
+      "features": [
+        "Interface utilisateur interactive et réactive construite avec React.js",
+        "API RESTful utilisant Node.js et Express",
+        "Catalogue de produits avec catégories, recherche et filtrage",
+        "Authentification et autorisation sécurisées des utilisateurs",
+        "Système de panier d'achat et de paiement intégré",
+        "Tableau de bord administrateur pour la gestion des stocks et des commandes",
+        "Avis et évaluations des utilisateurs pour les jeux",
+        "Suivi des stocks et des commandes en temps réel"
+      ],
+      "challenges": "L'un des principaux défis était de mettre en place un système de gestion des stocks en temps réel capable de gérer les actions simultanées des utilisateurs sans survendre. La solution a impliqué la mise en œuvre de mises à jour optimistes de l'interface utilisateur avec validation côté serveur et un système de traitement des commandes basé sur une file d'attente."
+    }
+  },  
+  "footer": {
+    "tryNow": "Essayer maintenant !",
+    "moreTemplates": "Plus de modèles",
+    "allRightsReserved": "Tous droits réservés.",
+    "socialLinks": {
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "dribbble": "Dribbble",
+      "behance": "Behance"
+    }
   },
   "contact": {
     "title": "Contactez-moi",
     "email": "fakhfakh.ahmeed@gmail.com",
     "phone": "+216 28 820 474",
-    "linkedin": "linkedin.com/in/ahmed-fakhfakh"
+    "linkedin": "linkedin.com/in/ahmed-fakhfakh",
+    "pageTitle": "CONTACTEZ-MOI",
+    "intro": "Intéressé par une collaboration? N'hésitez pas à me contacter via le formulaire ci-dessous ou par le biais de mes réseaux sociaux.",
+    "sendMessage": "Envoyer un message",
+    "formLabels": {
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "required": "Obligatoire"
+    },
+    "placeholders": {
+      "name": "Votre nom",
+      "email": "Votre adresse email",
+      "subject": "Sujet de votre message",
+      "message": "Votre message"
+    },
+    "submitButton": "Envoyer",
+    "submitting": "Envoi en cours...",
+    "formMessages": {
+      "success": "Merci ! Votre message a été envoyé avec succès.",
+      "error": "Veuillez remplir tous les champs obligatoires."
+    },
+    "contactInfo": "Informations de contact",
+    "connect": "Réseaux",
+    "availability": "Disponibilité",
+    "availabilityText": "Je suis actuellement disponible pour des missions freelance et ouvert à la discussion de nouvelles opportunités.",
+    "hireMe": "Embauchez-moi",
+    "downloadCV": "Télécharger CV",
+    "downloading": "Téléchargement..."
   }
 }

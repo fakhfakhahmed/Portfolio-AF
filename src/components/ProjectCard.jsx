@@ -179,7 +179,7 @@ const ProjectCard = ({ project, onViewDetails }) => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 pb-4 sm:pb-6 md:pb-8 flex justify-center space-x-4 sm:space-x-10">
+      <div className="absolute bottom-0 left-0 right-0 pb-4 sm:pb-6 md:pb-4 flex justify-center space-x-4 sm:space-x-10">
         <a 
           href={project.link || "#"} 
           target={project.link ? "_blank" : ""}
