@@ -7,41 +7,41 @@ import GitHubProfile from '../components/GitHubProfile';
 import GitHubActivity from '../components/GitHubActivity';
 import ProjectDetailsPopup from '../components/ProjectDetailsPopup';
 
-// Import project media
+// Import project media using URL constructor for reliable path resolution during builds
 // Portfolio Website
-import portfolioGif from '../assets/projects/Portfolio Website/brave_CxTzltUxdb.gif';
-import portfolioImg1 from '../assets/projects/Portfolio Website/Screenshot 2025-05-27 142647.png';
-import portfolioImg2 from '../assets/projects/Portfolio Website/Screenshot 2025-05-27 142725.png';
-import portfolioImg3 from '../assets/projects/Portfolio Website/Screenshot 2025-05-27 142752.png';
+const portfolioGif = new URL('../assets/projects/Portfolio Website/brave_CxTzltUxdb.gif', import.meta.url).href;
+const portfolioImg1 = new URL('../assets/projects/Portfolio Website/Screenshot 2025-05-27 142647.png', import.meta.url).href;
+const portfolioImg2 = new URL('../assets/projects/Portfolio Website/Screenshot 2025-05-27 142725.png', import.meta.url).href;
+const portfolioImg3 = new URL('../assets/projects/Portfolio Website/Screenshot 2025-05-27 142752.png', import.meta.url).href;
 // Raskelni
-import raskelniGif from '../assets/projects/Raskelni/raskelni.gif';
-import raskelniImg1 from '../assets/projects/Raskelni/MobileDemandeAccpeter.png';
-import raskelniImg2 from '../assets/projects/Raskelni/MobileHome.png';
-import raskelniImg3 from '../assets/projects/Raskelni/MobileLivreurPaiments.png';
-import raskelniImg4 from '../assets/projects/Raskelni/MobileSuiviLesDemande.png';
-import raskelniImg5 from '../assets/projects/Raskelni/UserAddProduct.png';
-import raskelniImg6 from '../assets/projects/Raskelni/UserAddProductPOPUP.png';
-import raskelniImg7 from '../assets/projects/Raskelni/UserSubmitDemande.png';
-// Boostra
-import boostraImg1 from '../assets/projects/Boostra/1.png';
-import boostraImg2 from '../assets/projects/Boostra/2.png';
-import boostraImg3 from '../assets/projects/Boostra/278924760_839178530372415_5549002044770435650_n.png';
-import boostraImg4 from '../assets/projects/Boostra/NEWSFEED_Copy.png';
-import boostraImg5 from '../assets/projects/Boostra/quiz.png';
+const raskelniGif = new URL('../assets/projects/Raskelni/raskelni.gif', import.meta.url).href;
+const raskelniImg1 = new URL('../assets/projects/Raskelni/MobileDemandeAccpeter.png', import.meta.url).href;
+const raskelniImg2 = new URL('../assets/projects/Raskelni/MobileHome.png', import.meta.url).href;
+const raskelniImg3 = new URL('../assets/projects/Raskelni/MobileLivreurPaiments.png', import.meta.url).href;
+const raskelniImg4 = new URL('../assets/projects/Raskelni/MobileSuiviLesDemande.png', import.meta.url).href;
+const raskelniImg5 = new URL('../assets/projects/Raskelni/UserAddProduct.png', import.meta.url).href;
+const raskelniImg6 = new URL('../assets/projects/Raskelni/UserAddProductPOPUP.png', import.meta.url).href;
+const raskelniImg7 = new URL('../assets/projects/Raskelni/UserSubmitDemande.png', import.meta.url).href;
+// Boostra - Using URL constructor for all imports to avoid path resolution issues
+const boostraImg1 = new URL('../assets/projects/Boostra/1.png', import.meta.url).href;
+const boostraImg2 = new URL('../assets/projects/Boostra/2.png', import.meta.url).href;
+const boostraImg3 = new URL('../assets/projects/Boostra/278924760_839178530372415_5549002044770435650_n.png', import.meta.url).href;
+const boostraImg4 = new URL('../assets/projects/Boostra/NEWSFEED_Copy.png', import.meta.url).href;
+const boostraImg5 = new URL('../assets/projects/Boostra/quiz.png', import.meta.url).href;
 // GameZone
-import gamezoneImg1 from '../assets/projects/GameZone/BLOG.png';
-import gamezoneImg2 from '../assets/projects/GameZone/EVENT.png';
-import gamezoneImg3 from '../assets/projects/GameZone/HOME.png';
-import gamezoneImg4 from '../assets/projects/GameZone/LOGIN.png';
-import gamezoneImg5 from '../assets/projects/GameZone/LOGIN2.png';
-import gamezoneImg6 from '../assets/projects/GameZone/PRODUCT.png';
+const gamezoneImg1 = new URL('../assets/projects/GameZone/BLOG.png', import.meta.url).href;
+const gamezoneImg2 = new URL('../assets/projects/GameZone/EVENT.png', import.meta.url).href;
+const gamezoneImg3 = new URL('../assets/projects/GameZone/HOME.png', import.meta.url).href;
+const gamezoneImg4 = new URL('../assets/projects/GameZone/LOGIN.png', import.meta.url).href;
+const gamezoneImg5 = new URL('../assets/projects/GameZone/LOGIN2.png', import.meta.url).href;
+const gamezoneImg6 = new URL('../assets/projects/GameZone/PRODUCT.png', import.meta.url).href;
 // Budarent
-import budarentImg1 from '../assets/projects/Budarent/admindashbordcars.png';
-import budarentImg2 from '../assets/projects/Budarent/booking.png';
-import budarentImg3 from '../assets/projects/Budarent/card_details_and_reviews.png';
-import budarentImg4 from '../assets/projects/Budarent/cars.png';
-import budarentImg5 from '../assets/projects/Budarent/home.png';
-import budarentImg6 from '../assets/projects/Budarent/userprofile.png';
+const budarentImg1 = new URL('../assets/projects/Budarent/admindashbordcars.png', import.meta.url).href;
+const budarentImg2 = new URL('../assets/projects/Budarent/booking.png', import.meta.url).href;
+const budarentImg3 = new URL('../assets/projects/Budarent/card_details_and_reviews.png', import.meta.url).href;
+const budarentImg4 = new URL('../assets/projects/Budarent/cars.png', import.meta.url).href;
+const budarentImg5 = new URL('../assets/projects/Budarent/home.png', import.meta.url).href;
+const budarentImg6 = new URL('../assets/projects/Budarent/userprofile.png', import.meta.url).href;
 
 const Projects = () => {
   const { t } = useTranslation();
