@@ -38,10 +38,12 @@ const Contact = () => {
   
   // Handle form submission
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    // Don't preventDefault to allow the native form submission
+    // and the redirect to the Thanks page
     
     // Validate form data
     if (!formData.name || !formData.email || !formData.message) {
+      e.preventDefault(); // Only prevent default if validation fails
       setSubmitResult({ 
         status: 'error', 
         message: t('contact.formMessages.error') 
@@ -51,35 +53,12 @@ const Contact = () => {
     
     // Set submitting state to show loading indicator
     setIsSubmitting(true);
-    setSubmitResult({ status: null, message: '' });
-
-    try {
-      // Submit the form using the browser's built-in form submission
-      // FormSubmit.co will handle the email delivery
-      formRef.current.submit();
-      
-      // Show success message
-      setSubmitResult({ 
-        status: 'success', 
-        message: t('contact.formMessages.success') 
-      });
-      
-      // Reset form after successful submission
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-    } catch (error) {
-      console.error('Error sending message:', error);
-      setSubmitResult({
-        status: 'error',
-        message: 'An unexpected error occurred. Please try contacting directly at fakhfakh.ahmeed@gmail.com'
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    
+    // The form will be naturally submitted and FormSubmit.co will handle the redirect
+    // using the _next hidden input field we've added
+    
+    // We don't need to manually call form.submit() anymore because we're letting
+    // the natural form submission happen
   };
   
   // Handle CV download
@@ -130,16 +109,16 @@ const Contact = () => {
               {/* Custom Contact Form that matches site theme */}
               <form 
                 ref={formRef}
-                onSubmit={handleSubmit} 
-                className="space-y-6 relative overflow-hidden rounded-lg border border-gray-700 p-6 transition-all duration-300 hover:border-rn-accent/30 mb-8 bg-rn-light-gray/20"
                 action="https://formsubmit.co/fakhfakh.ahmeed@gmail.com" 
                 method="POST"
+                onSubmit={handleSubmit} 
+                className="space-y-6 relative overflow-hidden rounded-lg border border-gray-700 p-6 transition-all duration-300 hover:border-rn-accent/30 mb-8 bg-rn-light-gray/20"
               >
                 {/* FormSubmit.co configuration */}
                 <input type="hidden" name="_subject" value="New message from your portfolio website" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://fakhfakhahmed.github.io/contact" />
+                <input type="hidden" name="_next" value="https://fakhfakhahmed.github.io/Portfolio-AF/thanks" />
                 
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">{t('contact.formLabels.name')} <span className="text-red-500">*</span></label>
