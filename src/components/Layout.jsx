@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
         <div className="w-16 sm:w-20 md:w-24 bg-rn-darker flex flex-col fixed h-screen z-10">
         {/* Logo */}
         <div className="p-3 sm:p-4 md:p-5">
-          <Link to="/" className="text-rn-accent font-bold text-lg sm:text-xl">AF</Link>
+          <Link to="/" className="text-rn-accent font-bold text-lg sm:text-3xl md:text-4xl">AF</Link>
         </div>
         
         {/* Vertical Navigation */}
