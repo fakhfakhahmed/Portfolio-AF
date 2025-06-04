@@ -11,7 +11,7 @@
     "subtitle": "D\u00e9veloppeur Web Full-Stack"
   },
   "home": {
-    "personal": "25 ans / Tunisie / Freelance",
+    "personal": "25 ans / Tunisie ",
     "aboutText": "Je suis Ahmed, un d\u00e9veloppeur full-stack de 25 ans originaire de Tunisie. Je transforme le caf\u00e9 en code et les bugs en nuits blanches. J'aime tellement cr\u00e9er des applications que j'ai d\u00e9j\u00e0 d\u00e9bogu\u00e9 dans mes r\u00eaves. Je suis sp\u00e9cialis\u00e9 dans la transformation de la caf\u00e9ine et des posts Stack Overflow en applications fonctionnelles - et parfois, en stress.",
     "services": "Mes Services",
     "webDev": "D\u00e9veloppement Web",
@@ -80,15 +80,14 @@
     "title": "Exp\u00e9riences Professionnelles",
     "pageTitle": "EXP\u00c9RIENCES PROFESSIONNELLES",
     "intro": "Au cours de ma carri\u00e8re, j'ai eu l'opportunit\u00e9 de travailler sur divers projets qui ont renforc\u00e9 mes comp\u00e9tences techniques et mes capacit\u00e9s de r\u00e9solution de probl\u00e8mes. Voici un aper\u00e7u de mon parcours professionnel.",
-    "freelance": {
-      "dates": "01/2024 - Pr\u00e9sent",
-      "location": "\u00c0 distance",
-      "role": "D\u00e9veloppeur Full-Stack Freelance",
-      "company": "Auto-entrepreneur",
+    "supasoft": {
+      "dates": "10/2023 - Pr\u00e9sent",
+      "location": "Tunis, Tunisie",
+      "role": "D\u00e9veloppeur Full Stack",
+      "company": "Supasoft",
       "details": [
-        "Fourniture de solutions web et mobiles pour des clients internationaux en tant que d\u00e9veloppeur ind\u00e9pendant",
-        "D\u00e9veloppement d'applications avec React.js, Node.js, MongoDB et des frameworks modernes",
-        "Gestion du cycle de vie complet des projets : exigences, conception, d\u00e9veloppement, d\u00e9ploiement et support client"
+        "D\u00e9veloppement et maintenance d'applications web en utilisant des technologies modernes.",
+        "Collaboration avec des \u00e9quipes interfonctionnelles pour livrer des solutions logicielles de haute qualit\u00e9."
       ]
     },
     "tactic": {

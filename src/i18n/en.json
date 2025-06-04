@@ -11,7 +11,7 @@
     "subtitle": "Full-Stack Web Developer"
   },
   "home": {
-    "personal": "25 years / Tunisia / Freelance",
+    "personal": "25 years / Tunisia ",
     "aboutText": "I'm Ahmed, a 25-year-old full-stack developer from Tunisia. I turn coffee into code and bugs into sleepless nights. I love building apps so much, I once debugged in my dreams. I specialize in turning caffeine and Stack Overflow posts into fully functional apps — and occasionally, into stress.",
     "services": "My Services",
     "webDev": "Web Development",
@@ -80,15 +80,14 @@
     "title": "Professional Experience",
     "pageTitle": "PROFESSIONAL EXPERIENCE",
     "intro": "Throughout my career, I've had the opportunity to work on diverse projects that have enhanced my technical skills and problem-solving abilities. Here's a glimpse of my professional journey.",
-    "freelance": {
-      "dates": "01/2024 - Present",
-      "location": "Remote",
-      "role": "Freelance Full-Stack Developer",
-      "company": "Self-Employed",
+    "supasoft": {
+      "dates": "10/2023 - Present",
+      "location": "Tunis, Tunisia",
+      "role": "Full Stack Developer",
+      "company": "Supasoft",
       "details": [
-        "Delivering web and mobile solutions for international clients as a freelance developer",
-        "Building apps with React.js, Node.js, MongoDB, and modern frameworks",
-        "Managing full project lifecycle: requirements, design, development, deployment, and client support"
+        "Developed and maintained web applications using modern technologies.",
+        "Collaborated with cross-functional teams to deliver high-quality software solutions."
       ]
     },
     "tactic": {

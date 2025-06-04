@@ -18,17 +18,21 @@ const Experience = () => {
       {/* Timeline Section */}
       <section className="py-12">
         <div className="max-w-screen-xl mx-auto px-6">
-          {/* Freelance Experience */}
+          {/* Supasoft Experience */}
           <div className="mb-20 grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="md:col-span-1">
-              <div className="text-sm text-gray-500 uppercase tracking-wider">{t('experience.freelance.dates')}</div>
-              <div className="text-sm text-gray-500 uppercase mt-2">{t('experience.freelance.location')}</div>
+              <div className="text-sm text-gray-500 uppercase tracking-wider">10/2023 - Present</div>
+              <div className="text-sm text-gray-500 uppercase mt-2">{t('experience.supasoft.location', 'Tunis, Tunisia')}</div>
             </div>
             <div className="md:col-span-3">
-              <h2 className="text-2xl font-bold mb-4">{t('experience.freelance.role')}</h2>
-              <h3 className="text-xl mb-6">{t('experience.freelance.company')}</h3>
+              <h2 className="text-2xl font-bold mb-4">{t('experience.supasoft.role', 'Full Stack Developer')}</h2>
+              <h3 className="text-xl mb-6">
+                <a href="https://supasoft.com.tn/" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-400">
+                  {t('experience.supasoft.company', 'Supasoft')}
+                </a>
+              </h3>
               <ul className="space-y-4">
-                {t('experience.freelance.details', { returnObjects: true }).map((detail, index) => (
+                {t('experience.supasoft.details', { returnObjects: true, defaultValue: ['Developed and maintained web applications using modern technologies.', 'Collaborated with cross-functional teams to deliver high-quality software solutions.'] }).map((detail, index) => (
                   <li key={index} className="flex items-start">
                     <span className="mr-2 text-gray-400">-</span>
                     <span>{detail}</span>
