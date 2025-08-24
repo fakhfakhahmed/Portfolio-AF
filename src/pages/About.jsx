@@ -12,6 +12,7 @@ import jsLogo from '../assets/logos/javascript.svg';
 import typescriptLogo from '../assets/logos/typescript.svg';
 import phpLogo from '../assets/logos/php.svg';
 import dartLogo from '../assets/logos/dart.svg';
+import javaLogo from '../assets/logos/java.svg';
 import reactLogo from '../assets/logos/react.svg';
 import angularLogo from '../assets/logos/angular.svg';
 import flutterLogo from '../assets/logos/flutter.svg';
@@ -155,6 +156,12 @@ const About = () => {
                   name="Dart" 
                   description="For Flutter mobile apps" 
                   experience="2+ years"
+                />
+                <FlipCard 
+                  logo={javaLogo} 
+                  name="Java" 
+                  description="Enterprise backend development" 
+                  experience="3+ years"
                 />
               </div>
             </div>

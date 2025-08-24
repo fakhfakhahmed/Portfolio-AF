@@ -11,8 +11,8 @@
     "subtitle": "Full-Stack Web Developer"
   },
   "home": {
-    "personal": "25 years / Tunisia ",
-    "aboutText": "I'm Ahmed, a 25-year-old full-stack developer from Tunisia. I turn coffee into code and bugs into sleepless nights. I love building apps so much, I once debugged in my dreams. I specialize in turning caffeine and Stack Overflow posts into fully functional apps — and occasionally, into stress.",
+    "personal": "{{age}} years / Tunisia ",
+    "aboutText": "I'm Ahmed, a {{age}}-year-old Full-Stack Engineer with 2+ years of experience delivering scalable, high-performance web and mobile applications. Skilled in React.js, Angular, Node.js, Spring Boot, Supabase, MongoDB, and SQL, with solid expertise in microservices, REST APIs, and CI/CD pipelines. A friendly and collaborative professional, I embrace AI as the driver of the future and seek to integrate it into my projects to create smarter, more efficient solutions. My experience spans e-commerce platforms for influencers, recycling management systems, and gaming communities — always with a focus on code quality, performance, and user satisfaction.",
     "services": "My Services",
     "webDev": "Web Development",
     "webDevDesc": "Building a custom tailored solution based on your technical specification.",
@@ -26,7 +26,7 @@
   },
   "about": {
     "title": "About Me",
-    "description": "Motivated and passionate software engineer specialized in web and mobile development, seeking a junior developer position in React.js or Node.js. Eager to contribute to impactful projects and grow within a dynamic team.",
+    "description": "Full-Stack Engineer with 2+ years of experience delivering scalable, high-performance web and mobile applications. Skilled in React.js, Angular, Node.js, Spring Boot, Supabase, MongoDB, and SQL, with solid expertise in microservices, REST APIs, and CI/CD pipelines. A friendly and collaborative professional, I embrace AI as the driver of the future and seek to integrate it into my projects to create smarter, more efficient solutions.",
     "professionalTitle": "Professional Profile",
     "experience": "My experience spans building responsive web applications with React.js, designing scalable backend architectures using Spring Boot, and implementing DevOps pipelines with Jenkins and Docker. I have also worked with Flutter in cross-platform contexts. I'm especially passionate about optimizing REST APIs, improving system performance, and delivering clean, efficient code across the stack.",
     "educationTitle": "Education & Training",
@@ -69,55 +69,58 @@
   },
   "skills": {
     "title": "Technical Skills",
-    "languages": "Languages: JavaScript, Java, PHP, Dart",
-    "frontend": "Frontend: React.js, Angular, Flutter",
-    "backend": "Backend: Node.js, Spring Boot",
-    "databases": "Databases: MySQL, MongoDB",
-    "devops": "DevOps & Tools: Docker, Jenkins, SonarQube, Prometheus, Grafana",
-    "methodologies": "Architectures: Microservices, REST APIs, CI/CD pipelines"
+    "languages": "Languages: JavaScript, Java, PHP, Dart, TypeScript",
+    "frontend": "Frontend: React.js, Angular, Flutter, HTML5, CSS3",
+    "backend": "Backend: Node.js, Express.js, Spring Boot, PHP",
+    "databases": "Databases: MySQL, MongoDB, PostgreSQL (Supabase)",
+    "devops": "DevOps & Tools: Docker, Jenkins, SonarQube, Prometheus, Grafana, Kubernetes",
+    "methodologies": "Architectures: Microservices, REST APIs, CI/CD pipelines, RabbitMQ, Agile/Scrum"
   },
   "experience": {
     "title": "Professional Experience",
     "pageTitle": "PROFESSIONAL EXPERIENCE",
     "intro": "Throughout my career, I've had the opportunity to work on diverse projects that have enhanced my technical skills and problem-solving abilities. Here's a glimpse of my professional journey.",
     "supasoft": {
-      "dates": "10/2023 - Present",
+      "dates": "09/2023 - Present",
       "location": "Tunis, Tunisia",
-      "role": "Full Stack Developer",
+      "role": "Freelance Full-Stack Developer",
       "company": "Supasoft",
       "details": [
-        "Developed and maintained web applications using modern technologies.",
-        "Collaborated with cross-functional teams to deliver high-quality software solutions."
+        "Built a platform for influencers to create online boutiques and sell products.",
+        "Developed React.js frontend and Node.js backend with Supabase database.",
+        "Delivered scalable, maintainable solutions in collaboration with clients."
       ]
     },
     "tactic": {
       "dates": "02/2023 - 08/2023",
       "location": "Tunisia",
-      "role": "Full-Stack Developer – Final Year Internship",
+      "role": "Full-Stack Developer (Final Year Project)",
       "company": "TAC-TIC",
       "details": [
-        "Built a mobile app using Flutter and a web app with React.js",
-        "Designed and implemented a scalable microservices architecture with Spring Boot",
-        "Integrated CI/CD pipelines using Jenkins and Docker",
-        "Optimized REST APIs, reducing response times by 30%"
+        "Created a recycling platform with web, mobile, and delivery management apps.",
+        "Spring Boot microservices with RabbitMQ, Docker, Kubernetes.",
+        "React.js for web frontend, Flutter/Dart for mobile app.",
+        "Implemented CI/CD pipeline and improved API performance by 30%."
       ]
     },
     "beecoders": {
       "dates": "06/2022 - 08/2022",
       "location": "Tunisia",
-      "role": "Full-Stack Developer – Engineering Internship",
+      "role": "Full-Stack Developer Intern",
       "company": "Beecoders",
       "details": [
-        "Developed a gaming e-commerce platform using React.js, Node.js, and MongoDB"
+        "Developed a gaming e-commerce and community platform.",
+        "Tech stack: React.js, Node.js, MongoDB."
       ]
     },
     "sisagri": {
       "dates": "06/2021 - 08/2021",
       "location": "Tunisia",
-      "role": "Web Developer – Technician Internship",
+      "role": "Web Developer Intern",
       "company": "Sisagri",
       "details": [
-        "Created an e-commerce website for agricultural equipment sales and rentals"
+        "Built an e-commerce site for agricultural equipment sales and rentals.",
+        "Tech stack: PHP, HTML, CSS, Bootstrap."
       ]
     },
     "skillsSection": {
@@ -178,8 +181,8 @@
     "viewCode": "View Code",
     "viewProject": "View Project",
     "list": [
-      "DevOps CI/CD Project - Jenkins, Docker, SonarQube, Prometheus, Grafana - 2022",
-      "HR Web App - Angular, Spring Boot, MySQL - 2021",
+      "DevOps Pipeline App - Spring Boot, Jenkins, Docker, SonarQube, Prometheus, Grafana - 2022",
+      "Employee Well-being Platform - Angular, Spring Boot, MySQL - 2021",
       "Multi-Platform Artist App - Symfony, JavaFX, CodeNameOne - 2020"
     ],
     "portfolio": {
@@ -283,6 +286,38 @@
         "Real-time inventory and order tracking"
       ],
       "challenges": "One of the main challenges was implementing a real-time inventory management system that could handle concurrent user actions without overselling. The solution involved implementing optimistic UI updates with server-side validation and a queue-based transaction system for processing orders."
+    },
+    "devops": {
+      "title": "DevOps Pipeline App",
+      "description": "Built a comprehensive DevOps pipeline application using Spring Boot, Jenkins, Docker, SonarQube, Prometheus, and Grafana for complete CI/CD automation.",
+      "detailedDescription": "This DevOps pipeline application demonstrates a complete CI/CD workflow implementation with monitoring and quality assurance. The project showcases modern DevOps practices including automated builds, code quality analysis, containerized deployment, and comprehensive monitoring.",
+      "features": [
+        "Automated CI/CD pipeline with Jenkins",
+        "Code quality analysis with SonarQube integration",
+        "Containerized deployment using Docker",
+        "Application monitoring with Prometheus",
+        "Real-time dashboards with Grafana",
+        "Spring Boot backend with comprehensive testing",
+        "Infrastructure as Code implementation",
+        "Automated deployment strategies"
+      ],
+      "challenges": "The main challenge was orchestrating multiple DevOps tools to work seamlessly together while maintaining security and performance. Implemented proper secret management and optimized pipeline execution times."
+    },
+    "wellbeing": {
+      "title": "Employee Well-being Platform",
+      "description": "Developed a comprehensive employee well-being platform using Angular, Spring Boot, and MySQL to enhance workplace connectivity and productivity.",
+      "detailedDescription": "This platform focuses on improving employee engagement and well-being within organizations. It provides tools for performance tracking, wellness programs, team collaboration, and comprehensive analytics to help companies create a more productive and satisfied workforce.",
+      "features": [
+        "Employee performance tracking and evaluation",
+        "Wellness program management and participation",
+        "Team collaboration and communication tools",
+        "Advanced analytics and reporting dashboards",
+        "Goal setting and achievement tracking",
+        "Feedback and survey systems",
+        "Mobile-responsive design for accessibility",
+        "Role-based access control and security"
+      ],
+      "challenges": "The key challenge was creating a system that balances employee privacy with meaningful insights for management. Implemented robust data protection measures and transparent analytics that benefit both employees and administrators."
     }
   },
   "common": {

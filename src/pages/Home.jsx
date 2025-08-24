@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useTranslationWithAge } from '../hooks/useTranslationWithAge';
 import profilePhoto from '../assets/279787631_1225434571324131_2014762143615193992_n.jpg';
 import styles from '../assets/styles/ProfileImage.module.css';
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslationWithAge();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 500);
 
   useEffect(() => {

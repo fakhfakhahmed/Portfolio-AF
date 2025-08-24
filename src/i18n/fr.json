@@ -11,8 +11,8 @@
     "subtitle": "D\u00e9veloppeur Web Full-Stack"
   },
   "home": {
-    "personal": "25 ans / Tunisie ",
-    "aboutText": "Je suis Ahmed, un d\u00e9veloppeur full-stack de 25 ans originaire de Tunisie. Je transforme le caf\u00e9 en code et les bugs en nuits blanches. J'aime tellement cr\u00e9er des applications que j'ai d\u00e9j\u00e0 d\u00e9bogu\u00e9 dans mes r\u00eaves. Je suis sp\u00e9cialis\u00e9 dans la transformation de la caf\u00e9ine et des posts Stack Overflow en applications fonctionnelles - et parfois, en stress.",
+    "personal": "{{age}} ans / Tunisie ",
+    "aboutText": "Je suis Ahmed, un ing\u00e9nieur Full-Stack de {{age}} ans avec plus de 2 ans d'exp\u00e9rience dans le d\u00e9veloppement d'applications web et mobiles performantes et \u00e9volutives. Comp\u00e9tences en React.js, Angular, Node.js, Spring Boot, Supabase, MongoDB et SQL, avec une solide expertise en microservices, API REST et pipelines CI/CD. Professionnel convivial et collaboratif, j'adopte l'IA comme moteur du futur et cherche \u00e0 l'int\u00e9grer dans mes projets pour cr\u00e9er des solutions plus intelligentes et efficaces. Mon exp\u00e9rience couvre des plateformes e-commerce pour influenceurs, des syst\u00e8mes de gestion du recyclage et des communaut\u00e9s gaming \u2014 toujours avec un souci de qualit\u00e9 du code, de performance et de satisfaction utilisateur.",
     "services": "Mes Services",
     "webDev": "D\u00e9veloppement Web",
     "webDevDesc": "Cr\u00e9ation de solutions sur mesure bas\u00e9es sur vos sp\u00e9cifications techniques.",
@@ -26,7 +26,7 @@
   },
   "about": {
     "title": "\u00c0 propos de moi",
-    "description": "Jeune ing\u00e9nieur passionn\u00e9 par le d\u00e9veloppement web et mobile, je suis \u00e0 la recherche d\u2019un poste stimulant en tant que d\u00e9veloppeur junior (React.js / Node.js). Motiv\u00e9, curieux et rigoureux, je souhaite int\u00e9grer une \u00e9quipe dynamique o\u00f9 je pourrai contribuer activement aux projets et d\u00e9velopper mes comp\u00e9tences.",
+    "description": "Ing\u00e9nieur Full-Stack avec plus de 2 ans d'exp\u00e9rience dans le d\u00e9veloppement d'applications web et mobiles performantes et \u00e9volutives. Comp\u00e9tences en React.js, Angular, Node.js, Spring Boot, Supabase, MongoDB et SQL, avec une solide expertise en microservices, API REST et pipelines CI/CD. Professionnel convivial et collaboratif, j'adopte l'IA comme moteur du futur et cherche \u00e0 l'int\u00e9grer dans mes projets pour cr\u00e9er des solutions plus intelligentes et efficaces.",
     "professionalTitle": "Profil Professionnel",
     "experience": "Mon exp\u00e9rience couvre la construction d'applications web r\u00e9actives avec React.js, la conception d'architectures backend \u00e9volutives avec Spring Boot et la mise en \u0153uvre de pipelines DevOps avec Jenkins et Docker. J'ai \u00e9galement travaill\u00e9 avec Flutter dans des contextes multiplateformes. Je suis particuli\u00e8rement passionn\u00e9 par l'optimisation des API REST, l'am\u00e9lioration des performances syst\u00e8me et la fourniture d'un code propre et efficace sur l'ensemble de la pile.",
     "educationTitle": "Formation & \u00c9ducation",
@@ -69,55 +69,58 @@
   },
   "skills": {
     "title": "Comp\u00e9tences Techniques",
-    "languages": "Langages : JavaScript, Java, PHP, Dart",
-    "frontend": "Frontend : React.js, Angular, Flutter",
-    "backend": "Backend : Node.js, Spring Boot",
-    "databases": "Bases de donn\u00e9es : MySQL, MongoDB",
-    "devops": "DevOps & Outils : Docker, Jenkins, SonarQube, Prometheus, Grafana",
-    "methodologies": "M\u00e9thodologies : Microservices, API REST, CI/CD"
+    "languages": "Langages : JavaScript, Java, PHP, Dart, TypeScript",
+    "frontend": "Frontend : React.js, Angular, Flutter, HTML5, CSS3",
+    "backend": "Backend : Node.js, Express.js, Spring Boot, PHP",
+    "databases": "Bases de donn\u00e9es : MySQL, MongoDB, PostgreSQL (Supabase)",
+    "devops": "DevOps & Outils : Docker, Jenkins, SonarQube, Prometheus, Grafana, Kubernetes",
+    "methodologies": "M\u00e9thodologies : Microservices, API REST, CI/CD, RabbitMQ, Agile/Scrum"
   },
   "experience": {
     "title": "Exp\u00e9riences Professionnelles",
     "pageTitle": "EXP\u00c9RIENCES PROFESSIONNELLES",
     "intro": "Au cours de ma carri\u00e8re, j'ai eu l'opportunit\u00e9 de travailler sur divers projets qui ont renforc\u00e9 mes comp\u00e9tences techniques et mes capacit\u00e9s de r\u00e9solution de probl\u00e8mes. Voici un aper\u00e7u de mon parcours professionnel.",
     "supasoft": {
-      "dates": "10/2023 - Pr\u00e9sent",
+      "dates": "09/2023 - Pr\u00e9sent",
       "location": "Tunis, Tunisie",
-      "role": "D\u00e9veloppeur Full Stack",
+      "role": "D\u00e9veloppeur Full-Stack Freelance",
       "company": "Supasoft",
       "details": [
-        "D\u00e9veloppement et maintenance d'applications web en utilisant des technologies modernes.",
-        "Collaboration avec des \u00e9quipes interfonctionnelles pour livrer des solutions logicielles de haute qualit\u00e9."
+        "Construction d'une plateforme pour les influenceurs pour cr\u00e9er des boutiques en ligne et vendre des produits.",
+        "D\u00e9veloppement frontend React.js et backend Node.js avec base de donn\u00e9es Supabase.",
+        "Livraison de solutions \u00e9volutives et maintenables en collaboration avec les clients."
       ]
     },
     "tactic": {
       "dates": "02/2023 - 08/2023",
       "location": "Tunisie",
-      "role": "D\u00e9veloppeur Full-Stack \u2013 Stage de fin d'\u00e9tudes",
+      "role": "D\u00e9veloppeur Full-Stack (Projet de fin d'\u00e9tudes)",
       "company": "TAC-TIC",
       "details": [
-        "D\u00e9veloppement d'une application mobile (Flutter) et web (React.js)",
-        "Mise en place d'une architecture microservices avec Spring Boot",
-        "Int\u00e9gration CI/CD via Jenkins et Docker",
-        "Optimisation des API REST (r\u00e9duction de 30% du temps de r\u00e9ponse)"
+        "Cr\u00e9ation d'une plateforme de recyclage avec applications web, mobile et de gestion de livraison.",
+        "Microservices Spring Boot avec RabbitMQ, Docker, Kubernetes.",
+        "React.js pour le frontend web, Flutter/Dart pour l'application mobile.",
+        "Mise en \u0153uvre de pipeline CI/CD et am\u00e9lioration des performances API de 30%."
       ]
     },
     "beecoders": {
       "dates": "06/2022 - 08/2022",
       "location": "Tunisie",
-      "role": "D\u00e9veloppeur Full-Stack \u2013 Stage Ing\u00e9nieur",
+      "role": "Stagiaire D\u00e9veloppeur Full-Stack",
       "company": "Beecoders",
       "details": [
-        "Conception d'un site e-commerce gaming (React.js, Node.js, MongoDB)"
+        "D\u00e9veloppement d'une plateforme e-commerce et communaut\u00e9 gaming.",
+        "Technologies utilis\u00e9es : React.js, Node.js, MongoDB."
       ]
     },
     "sisagri": {
       "dates": "06/2021 - 08/2021",
       "location": "Tunisie",
-      "role": "D\u00e9veloppeur Web \u2013 Stage Technicien",
+      "role": "Stagiaire D\u00e9veloppeur Web",
       "company": "Sisagri",
       "details": [
-        "R\u00e9alisation d'un site e-commerce pour la vente/location de mat\u00e9riel agricole"
+        "R\u00e9alisation d'un site e-commerce pour la vente/location de mat\u00e9riel agricole.",
+        "Technologies utilis\u00e9es : PHP, HTML, CSS, Bootstrap."
       ]
     },
     "skillsSection": {
@@ -178,8 +181,8 @@
     "viewCode": "Voir le code",
     "viewProject": "Voir le projet",
     "list": [
-      "Projet DevOps CI/CD - Jenkins, Docker, SonarQube, Prometheus, Grafana - 2022",
-      "Application Web RH - Angular, Spring Boot, MySQL - 2021",
+      "Application Pipeline DevOps - Spring Boot, Jenkins, Docker, SonarQube, Prometheus, Grafana - 2022",
+      "Plateforme Bien-être des Employés - Angular, Spring Boot, MySQL - 2021",
       "Application Multi-Plateforme pour Artistes - Symfony, JavaFX, CodeNameOne - 2020"
     ],
     "portfolio": {
@@ -283,6 +286,38 @@
         "Suivi des stocks et des commandes en temps réel"
       ],
       "challenges": "L'un des principaux défis était de mettre en place un système de gestion des stocks en temps réel capable de gérer les actions simultanées des utilisateurs sans survendre. La solution a impliqué la mise en œuvre de mises à jour optimistes de l'interface utilisateur avec validation côté serveur et un système de traitement des commandes basé sur une file d'attente."
+    },
+    "devops": {
+      "title": "Application Pipeline DevOps",
+      "description": "Construction d'une application pipeline DevOps complète utilisant Spring Boot, Jenkins, Docker, SonarQube, Prometheus et Grafana pour l'automatisation CI/CD complète.",
+      "detailedDescription": "Cette application pipeline DevOps démontre une implémentation complète de workflow CI/CD avec surveillance et assurance qualité. Le projet présente des pratiques DevOps modernes incluant les builds automatisés, l'analyse de qualité de code, le déploiement conteneurisé et la surveillance complète.",
+      "features": [
+        "Pipeline CI/CD automatisé avec Jenkins",
+        "Analyse de qualité de code avec intégration SonarQube",
+        "Déploiement conteneurisé utilisant Docker",
+        "Surveillance d'application avec Prometheus",
+        "Tableaux de bord en temps réel avec Grafana",
+        "Backend Spring Boot avec tests complets",
+        "Implémentation Infrastructure as Code",
+        "Stratégies de déploiement automatisées"
+      ],
+      "challenges": "Le principal défi était d'orchestrer plusieurs outils DevOps pour qu'ils fonctionnent ensemble de manière transparente tout en maintenant la sécurité et les performances. Implémentation d'une gestion appropriée des secrets et optimisation des temps d'exécution des pipelines."
+    },
+    "wellbeing": {
+      "title": "Plateforme Bien-être des Employés",
+      "description": "Développement d'une plateforme complète de bien-être des employés utilisant Angular, Spring Boot et MySQL pour améliorer la connectivité et la productivité au travail.",
+      "detailedDescription": "Cette plateforme se concentre sur l'amélioration de l'engagement et du bien-être des employés au sein des organisations. Elle fournit des outils pour le suivi des performances, les programmes de bien-être, la collaboration d'équipe et des analyses complètes pour aider les entreprises à créer une main-d'œuvre plus productive et satisfaite.",
+      "features": [
+        "Suivi et évaluation des performances des employés",
+        "Gestion et participation aux programmes de bien-être",
+        "Outils de collaboration et communication d'équipe",
+        "Tableaux de bord d'analyses et rapports avancés",
+        "Définition et suivi d'objectifs",
+        "Systèmes de feedback et sondages",
+        "Design responsive mobile pour l'accessibilité",
+        "Contrôle d'accès basé sur les rôles et sécurité"
+      ],
+      "challenges": "Le défi clé était de créer un système qui équilibre la confidentialité des employés avec des insights significatifs pour la direction. Implémentation de mesures robustes de protection des données et d'analyses transparentes qui bénéficient à la fois aux employés et aux administrateurs."
     }
   },  
   "common": {
